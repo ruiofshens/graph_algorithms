@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
+import java.util.*;
 
 /**
  * Code is mostly referenced from online
@@ -16,7 +14,7 @@ public class BFS_k {
         int [][] pathLengths = new int [V][k];
 
         // Record all the hospitals that have visited the node
-        int [][] listHospitalsVisited = new int [V][];
+        int [][] listHospitalsVisited = new int [V][k];
 
         // Record the current number of hospitals visited the node
         int [] numHospitalVisited = new int[V];
@@ -24,7 +22,7 @@ public class BFS_k {
 
         // Mark all the vertices as not visited by any hospital
         int num_hospitals = hospitals.length; //the total number of hospitals
-        boolean [] [] visited = new boolean[V] [num_hospitals]; //array to confirm that it has not been visited by that hospital
+        boolean [] [] visited = new boolean[V] [V]; //array to confirm that it has not been visited by that hospital
 
         // Mark all the nodes that are already enqueued
         boolean [] isEnqueued = new boolean[V];
@@ -81,5 +79,40 @@ public class BFS_k {
                 }
             }
         return pathLengths;
+    }
+
+    // Main method used for testing the code
+    public static void main(String[] args) {
+
+        HashMap<Integer, ArrayList<Integer>> adj = new HashMap<>();
+        adj.put(0, new ArrayList<>(List.of(3,5,6)));
+        adj.put(1, new ArrayList<>(List.of(4)));
+        adj.put(2, new ArrayList<>(List.of(3,8)));
+        adj.put(3, new ArrayList<>(List.of(0,2,8)));
+        adj.put(4, new ArrayList<>(List.of(1,7)));
+        adj.put(5, new ArrayList<>(List.of(0,6)));
+        adj.put(6, new ArrayList<>(List.of(0,5,7)));
+        adj.put(7, new ArrayList<>(List.of(4,6,8,11)));
+        adj.put(8, new ArrayList<>(List.of(2,3,7,9)));
+        adj.put(9, new ArrayList<>(List.of(8,10)));
+        adj.put(10, new ArrayList<>(List.of(9)));
+        adj.put(11, new ArrayList<>(List.of(7)));
+
+        int numNodes = 12;
+        int [] hospitals = {0,8,7};
+        int k = 1;
+
+        int[][] pathLengths = BFS_k.search(hospitals, adj, 1);
+        for (int i = 0; i < numNodes; i ++) {
+            System.out.println(Arrays.toString(pathLengths[i]));
+        }
+        System.out.println("Compare that with normal BFS");
+
+        LinkedList<Integer>[] result = BFS.search(hospitals, adj);
+        for (LinkedList<Integer> path: result) {
+            System.out.println(path);
+        }
+
+
     }
 }
