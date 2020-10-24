@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -8,9 +9,9 @@ import java.util.LinkedList;
  */
 public class BFS {
     // prints BFS traversal from a given source s
-    public static LinkedList<Integer>[] search(int[] hospitals, LinkedList<Integer>[] adj)
+    public static LinkedList<Integer>[] search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj)
     {
-        int V = adj.length;
+        int V = adj.size();
         LinkedList<Integer>[] paths = new LinkedList[V]; //contains the closest hospital for each node
         for (int i=0; i<V; i++) {
             paths[i] = new LinkedList<>();
@@ -39,7 +40,7 @@ public class BFS {
             // Get all adjacent vertices of the dequeued vertex s
             // If a adjacent has not been visited, then mark it
             // visited and enqueue it
-            for (int n : adj[currentNode]) {
+            for (int n : adj.get(currentNode)) {
                 if (!visited[n]) {
                     visited[n] = true;
                     queue.add(n);
