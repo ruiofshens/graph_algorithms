@@ -1,0 +1,32 @@
+# Directed graph (each unordered pair of nodes is saved once): roadNet-PA.txt 
+# Pennsylvania road network
+# Nodes: 1088092 Edges: 3083796
+# FromNodeId	ToNodeId
+0	3
+0	5
+0	6
+1	4
+2	3
+2	8
+3	0
+3	2
+3	8
+4	1
+4	7
+5	0
+5	6
+6	0
+6	5
+6	7
+7	4
+7	6
+7	8
+7	11
+8	2
+8	3
+8	7
+8	9
+9	8
+9	10
+10	9
+11	7
