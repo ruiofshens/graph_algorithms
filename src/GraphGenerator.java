@@ -68,7 +68,7 @@ public class GraphGenerator {
     private static void generateRandomGraphFile(int numNodes, int avgDegree, String fileName) {
         Graph graph = randomGraph(numNodes, avgDegree);
         try {
-            FileWriter writer = new FileWriter("data/"+fileName);
+            FileWriter writer = new FileWriter("data/graphs/"+fileName);
             int numOfNodes = graph.getNodeCount();
             int numOfEdges = graph.getEdgeCount();
             writer.write("# Nodes: " + numOfNodes + " Edges: " + numOfEdges + "\n");
@@ -102,13 +102,13 @@ public class GraphGenerator {
 
     // for testing
     public static void main(String[] args) {
-        HashMap<Integer, ArrayList<Integer>> test = getGraphFromFile("data/graphs/roadNet-PA.txt");
-//        int n = test.size();
-//        for (int i = 0; i < n; i++) {
-//            if (test.get(i) == null) {
-//                System.out.println(i + " doesn't exist");
-//            }
-//        }
-//        System.out.println("size: " + n);
+        HashMap<Integer, ArrayList<Integer>> test = getGraphFromFile("data/graphs/randomGraph.txt");
+        int n = test.size();
+        for (int i = 0; i < n; i++) {
+            if (test.get(i) == null) {
+                System.out.println(i + " doesn't exist");
+            }
+        }
+        System.out.println("size: " + n);
     }
 }
