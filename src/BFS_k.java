@@ -1,3 +1,4 @@
+import javax.swing.plaf.basic.BasicInternalFrameTitlePane;
 import java.util.*;
 
 /**
@@ -39,6 +40,7 @@ public class BFS_k {
             queue.add(hospital);
             isEnqueued[hospital] = true;
             pathLengths[hospital][0] = 1; // a path length is always positive. 0 indicates no paths
+            listHospitalsVisited[hospital][0] = hospital;
             numHospitalVisited[hospital] = 1;
         }
 
@@ -48,24 +50,37 @@ public class BFS_k {
         int currentNumHospitalVisited;
         while (queue.size() != 0 && checkAllFilled > 0)
         {
+
             // Dequeue a vertex from queue and print it
             currentNode = queue.poll();
+            // Update that the currentNode is no longer in the queue
+            isEnqueued[currentNode] = false;
+//            System.out.println("current node: " + currentNode);
             currentPathLengths = pathLengths[currentNode];
             currentHospitalsVisited = listHospitalsVisited[currentNode];
+//            System.out.println("hospital visited at current node: " + Arrays.toString(currentHospitalsVisited));
+
             currentNumHospitalVisited = numHospitalVisited[currentNode];
             // Get all adjacent vertices of the dequeued vertex s
             // If a adjacent has not been visited by the hospital, and number of currentHospitalsVisited is not k,
             // then mark it visited by that hospital, and append the hospital to listHospitalsVisited associated with the node
             // Only enqueue it if it is not already in queue
             for (int n : adj.get(currentNode)) {
+//                System.out.println("child node: " + n);
                 for (int i = 0; i < currentNumHospitalVisited; i++) {
                      int hospital =  currentHospitalsVisited[i];
+//                     System.out.println("current hospital: " + hospital);
                      int pathLengthToHospital = currentPathLengths[i];
+//                        System.out.println("number of hospital visited at child node: " + numHospitalVisited[n]);
+//                        System.out.println("visited by this hospital before: " + visited[n][hospital]);
                         if (!visited[n][hospital] && numHospitalVisited[n] < k) {
                             visited[n][hospital] = true;
 
                             // If node not in queue, enqueue
-                            if (!isEnqueued[n]) queue.add(n);
+                            if (!isEnqueued[n]) {
+                                queue.add(n);
+                                isEnqueued[n] = true;
+                            }
 
                             // Put the hospital to the next index in the array hospitalVisited
                             listHospitalsVisited[n][numHospitalVisited[n]] = hospital;
@@ -73,10 +88,13 @@ public class BFS_k {
                             numHospitalVisited[n] += 1;
                             if (numHospitalVisited[n] == k) {
                                 checkAllFilled -= 1;
+//                                System.out.println(checkAllFilled);
                             }
+//                            System.out.println("pathLengths of child node: " + Arrays.toString(pathLengths[n]));
                         }
                     }
                 }
+//                System.out.println("queue size = " + queue.size());
             }
         return pathLengths;
     }
@@ -100,18 +118,19 @@ public class BFS_k {
 
         int numNodes = 12;
         int [] hospitals = {0,8,7};
-        int k = 1;
+        int k = 2;
 
-        int[][] pathLengths = BFS_k.search(hospitals, adj, 1);
+        int[][] pathLengths = BFS_k.search(hospitals, adj, k);
         for (int i = 0; i < numNodes; i ++) {
+            System.out.print("Node " + i + ": ");
             System.out.println(Arrays.toString(pathLengths[i]));
         }
-        System.out.println("Compare that with normal BFS");
-
-        LinkedList<Integer>[] result = BFS.search(hospitals, adj);
-        for (LinkedList<Integer> path: result) {
-            System.out.println(path);
-        }
+//        System.out.println("Compare that with normal BFS");
+//
+//        LinkedList<Integer>[] result = BFS.search(hospitals, adj);
+//        for (LinkedList<Integer> path: result) {
+//            System.out.println(path);
+//        }
 
 
     }
