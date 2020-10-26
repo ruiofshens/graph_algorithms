@@ -9,19 +9,18 @@ import java.util.LinkedList;
  */
 public class BFS {
     // prints BFS traversal from a given source s
-    public static LinkedList<Integer>[] search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj)
+    public static LinkedList<Integer>[] search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj, int maxNodeId)
     {
-        int V = adj.size();
-        LinkedList<Integer>[] paths = new LinkedList[V]; //contains the closest hospital for each node
-        for (int i=0; i<V; i++) {
+        LinkedList<Integer>[] paths = new LinkedList[maxNodeId+1]; //contains the closest hospital for each node
+        for (int i=0; i<maxNodeId+1; i++) {
             paths[i] = new LinkedList<>();
         }
 
         // Mark all the vertices as not visited
-        boolean[] visited = new boolean[V];
+        boolean[] visited = new boolean[maxNodeId+1];
 
         // Create a queue for BFS
-        LinkedList<Integer> queue = new LinkedList<Integer>();
+        LinkedList<Integer> queue = new LinkedList<>();
 
         // Mark all hospitals as source nodes
         for (int hospital : hospitals) {

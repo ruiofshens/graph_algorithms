@@ -62,7 +62,7 @@ public class BFS_k_ver2 {
                     if (!visited[n][hospital] && hospitalsVisited[n].size() < k) {
                         visited[n][hospital] = true;
                         queue.add(n);
-                        pathLengths[n].addLast();
+                        pathLengths[n].addLast(n);
                         for (Integer integer : currentPathLengths) {
                             pathLengths[n].add(integer);
                         }

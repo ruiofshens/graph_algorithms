@@ -16,7 +16,6 @@ public class GraphAlgorithmConsole {
         System.out.println("Ensure graph text files (file1) are placed under data/graphs,");
         System.out.println("and hospital text files (file2) are placed under data/hospitals");
         System.out.println();
-
         while (true) {
             graph = readGraph(sc);
             maxNodeId = Collections.max(graph.keySet());
@@ -37,7 +36,7 @@ public class GraphAlgorithmConsole {
                 case 1:
 //                    int[] hospitals = {10, 50, 80};
 //                    System.out.println("Hospitals are located at 10, 50 and 80");
-                    LinkedList<Integer>[] result = BFS.search(hospitals, graph); // broken for now
+                    LinkedList<Integer>[] result = BFS.search(hospitals, graph, maxNodeId);
                     for (LinkedList<Integer> path: result) {
                         System.out.println(path);
                     }
