@@ -2,7 +2,9 @@ import java.io.FileNotFoundException;
 import java.util.*;
 import java.io.File;
 
-//TODO: Decide on output format, create abstract algo class again?
+//TODO: Decide on output format
+//TODO: HospitalGenerator
+//TODO: GUI/Graph visualization?
 public class GraphAlgorithmConsole {
 
     public static void main(String[] args) {
@@ -15,39 +17,60 @@ public class GraphAlgorithmConsole {
         System.out.println("Welcome to our application!");
         System.out.println("Ensure graph text files (file1) are placed under data/graphs,");
         System.out.println("and hospital text files (file2) are placed under data/hospitals");
-        System.out.println();
-        while (true) {
+
+        do {
+            System.out.println();
             graph = readGraph(sc);
             maxNodeId = Collections.max(graph.keySet());
             hospitals = readHospitals(sc);
-
-            System.out.println("");
-            System.out.println( "============Algorithms============\n" +
-                                "|Enter '1' for Question (a) + (b)|\n" +
-                                "|Enter '2' for Question (c)      |\n" +
-                                "|Enter '3' for Question (d)      |\n" +
-                                "==================================");
-            try {
-                choice = Integer.parseInt(sc.nextLine());
-            } catch (NumberFormatException e) {
-                choice = -1;
-            }
-            switch (choice) {
-                case 1:
-//                    int[] hospitals = {10, 50, 80};
-//                    System.out.println("Hospitals are located at 10, 50 and 80");
-                    LinkedList<Integer>[] result = BFS.search(hospitals, graph, maxNodeId);
-                    for (LinkedList<Integer> path: result) {
-                        System.out.println(path);
-                    }
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-            }
-            break;
-        }
+            do {
+                System.out.println();
+                System.out.println("============Algorithms============\n" +
+                        "|Enter '1' for Question (a) + (b)|\n" +
+                        "|Enter '2' for Question (c)      |\n" +
+                        "|Enter '3' for Question (d)      |\n" +
+                        "==================================");
+                try {
+                    choice = Integer.parseInt(sc.nextLine());
+                } catch (NumberFormatException e) {
+                    choice = -1;
+                }
+                switch (choice) {
+                    case 1:
+                        LinkedList<Integer>[] result = BFS.search(hospitals, graph, maxNodeId);
+                        for (LinkedList<Integer> path : result) {
+                            System.out.println(path);
+                        }
+                        break;
+                    case 2:
+                        int[][] pathLengths = BFS_k.search(hospitals, graph, 2);
+                        for (int i = 0; i < graph.size(); i++) {
+                            System.out.print("Node " + i + ": ");
+                            System.out.println(Arrays.toString(pathLengths[i]));
+                        }
+                        break;
+                    case 3:
+                        System.out.print("Enter k: ");
+                        int k;
+                        while (true) {
+                            try {
+                                k = Integer.parseInt(sc.nextLine());
+                                break;
+                            } catch (Exception e) {
+                                System.out.println("Please enter a number.");
+                            }
+                        }
+                        pathLengths = BFS_k.search(hospitals, graph, k);
+                        for (int i = 0; i < graph.size(); i++) {
+                            System.out.print("Node " + i + ": ");
+                            System.out.println(Arrays.toString(pathLengths[i]));
+                        }
+                        break;
+                }
+                System.out.print("\nType 'y' to continue using the same graph and hospital files: ");
+            } while (sc.nextLine().equals("y"));
+            System.out.print("\nType 'y' to use another graph: ");
+        } while (sc.nextLine().equals("y"));
     }
 
     private static HashMap<Integer, ArrayList<Integer>> readGraph(Scanner sc) {

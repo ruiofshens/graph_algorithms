@@ -102,11 +102,14 @@ public class GraphGenerator {
 
     // for testing
     public static void main(String[] args) {
-        HashMap<Integer, ArrayList<Integer>> test = getGraphFromFile("data/graphs/randomGraph.txt");
+        HashMap<Integer, ArrayList<Integer>> test = getGraphFromFile("data/graphs/test.txt");
         int n = test.size();
         for (int i = 0; i < n; i++) {
             if (test.get(i) == null) {
-                System.out.println(i + " doesn't exist");
+                //System.out.println(i + " doesn't exist");
+                continue;
+            } else {
+                System.out.println(i + ": " + test.get(i));
             }
         }
         System.out.println("size: " + n);
