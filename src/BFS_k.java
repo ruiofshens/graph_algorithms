@@ -23,7 +23,7 @@ public class BFS_k {
 
         // Mark all the vertices as not visited by any hospital
         int num_hospitals = hospitals.length; //the total number of hospitals
-        boolean [] [] visited = new boolean[V] [V]; //array to confirm that it has not been visited by that hospital
+        boolean [] [] visited = new boolean[V] [num_hospitals]; //array to confirm that it has not been visited by that hospital
 
         // Mark all the nodes that are already enqueued
         boolean [] isEnqueued = new boolean[V];
@@ -32,11 +32,17 @@ public class BFS_k {
         int checkAllFilled = V;
 
         // Create a queue for BFS
-        LinkedList<Integer> queue = new LinkedList<Integer>();
+        LinkedList<Integer> queue = new LinkedList<>();
+
+        // Create a hashmap to map the h hospitals to indexes 0 to h-1
+        HashMap<Integer, Integer> hospitalIndexes = new HashMap<>();
 
         // Mark all hospitals as source nodes
-        for (int hospital : hospitals) {
-            visited[hospital][hospital] = true;
+        for (int hospitalIndex = 0; hospitalIndex < num_hospitals; hospitalIndex ++) {
+            int hospital = hospitals[hospitalIndex];
+            hospitalIndexes.put(hospital, hospitalIndex); // map a hospital to its index in the hospitals array
+
+            visited[hospital][hospitalIndex] = true;
             queue.add(hospital);
             isEnqueued[hospital] = true;
             pathLengths[hospital][0] = 1; // a path length is always positive. 0 indicates no paths
@@ -73,8 +79,8 @@ public class BFS_k {
                      int pathLengthToHospital = currentPathLengths[i];
 //                        System.out.println("number of hospital visited at child node: " + numHospitalVisited[n]);
 //                        System.out.println("visited by this hospital before: " + visited[n][hospital]);
-                        if (!visited[n][hospital] && numHospitalVisited[n] < k) {
-                            visited[n][hospital] = true;
+                        if (!visited[n][hospitalIndexes.get(hospital)] && numHospitalVisited[n] < k) {
+                            visited[n][hospitalIndexes.get(hospital)] = true;
 
                             // If node not in queue, enqueue
                             if (!isEnqueued[n]) {
