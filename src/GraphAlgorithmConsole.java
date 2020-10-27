@@ -1,23 +1,59 @@
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 import java.io.File;
 
 //TODO: Decide on output format
-//TODO: HospitalGenerator
 //TODO: GUI/Graph visualization?
 public class GraphAlgorithmConsole {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        HashMap<Integer, ArrayList<Integer>> graph;
-        int maxNodeId; // largest node id, since largest node id >= number of nodes
-        int[] hospitals;
-        int choice;
 
         System.out.println("Welcome to our application!");
         System.out.println("Ensure graph text files (file1) are placed under data/graphs,");
         System.out.println("and hospital text files (file2) are placed under data/hospitals");
 
+        int menuOption = -1;
+        do {
+            System.out.println();
+            System.out.println("Main menu:");
+            System.out.println("1. Test the algorithms");
+            System.out.println("2. Generate hospital files");
+            System.out.println("3. Generate random graphs");
+            System.out.println("4. Quit");
+            System.out.print("Choose an option: ");
+            try {
+                menuOption = Integer.parseInt(sc.nextLine());
+            } catch (Exception e) {
+                System.out.println("ERROR: Please choose a valid option.");
+            }
+            System.out.println();
+            switch (menuOption) {
+                case 1:
+                    testAlgorithms(sc);
+                    break;
+                case 2:
+                    generateHospitalFiles(sc);
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("ERROR: Please choose a valid option.");
+            }
+            System.out.println();
+        } while (menuOption != 4);
+    }
+
+    private static void testAlgorithms(Scanner sc) {
+        HashMap<Integer, ArrayList<Integer>> graph;
+        int maxNodeId; // largest node id, since largest node id >= number of nodes
+        int[] hospitals;
+        int choice;
         do {
             System.out.println();
             graph = readGraph(sc);
@@ -67,9 +103,9 @@ public class GraphAlgorithmConsole {
                         }
                         break;
                 }
-                System.out.print("\nType 'y' to continue using the same graph and hospital files: ");
+                System.out.print("\nType 'y' to continue using the same graph and hospital files, any keys otherwise: ");
             } while (sc.nextLine().equals("y"));
-            System.out.print("\nType 'y' to use another graph: ");
+            System.out.print("\nType 'y' to use another graph, any keys otherwise: ");
         } while (sc.nextLine().equals("y"));
     }
 
@@ -104,6 +140,49 @@ public class GraphAlgorithmConsole {
             } catch (NumberFormatException e) {
                 System.out.println("Unable to read data! Check if format of file2 is correct.");
             }
+        }
+    }
+
+    private static void generateHospitalFiles(Scanner sc) {
+        ArrayList<Integer> nodes = new ArrayList<>();
+        Random random = new Random();
+
+        System.out.print("Enter the graph file to generate hospitals for (e.g. graph.txt): ");
+        try {
+            File graphFile = new File("data/graphs/"+sc.nextLine());
+            System.out.println("Reading graph file...");
+            Scanner graphSc = new Scanner(graphFile);
+            while (graphSc.hasNextLine()) {
+                String nextLine = graphSc.nextLine();
+                if (nextLine.startsWith("#")) {
+                    continue;
+                }
+                int node1 = Integer.valueOf(nextLine.split("\\s+")[0]);
+                int node2 = Integer.valueOf(nextLine.split("\\s+")[1]);
+                if (!nodes.contains(node1)) {
+                    nodes.add(node1);
+                }
+                if (!nodes.contains(node2)) {
+                    nodes.add(node2);
+                }
+            }
+            System.out.print("Enter name of new hospital file (e.g. hospital.txt): ");
+            FileWriter writer = new FileWriter("data/hospitals/"+sc.nextLine());
+            System.out.print("Enter number of hospital nodes: ");
+            int numOfHospitals = Integer.parseInt(sc.nextLine());
+            writer.write("# " + numOfHospitals + "\n");
+            for (int i = 0; i < numOfHospitals; i++) {
+                writer.write(nodes.get(random.nextInt(nodes.size())) + "\n");
+            }
+            writer.close();
+            System.out.println("Hospital file successfully created.");
+
+        } catch (FileNotFoundException e) {
+            System.out.println("Error: File not found.");
+        } catch (IOException e) {
+            System.out.println("Error occurred when writing file.");
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Invalid number of hospital nodes.");
         }
     }
 }

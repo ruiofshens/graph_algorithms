@@ -13,7 +13,14 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 /**
- * Only need to care about 2 methods: getRandomGraph and getGraphFromFile
+ * Class that returns a graph in the form of adjacency list (Hashmap)<br>
+ * Graphs can come from 2 sources:
+ * <ul>
+ *     <li>From a text file (same format as real road network file)</li>
+ *     <li>Random generation, with number of nodes and average degree specified</li>
+ * </ul>
+ * GraphAlgorithmConsole uses getGraphFromFile to read in and return the graph.
+ * There is no call to getRandomGraph from GraphAlgorithmConsole.
  */
 public class GraphGenerator {
 
