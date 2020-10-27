@@ -38,6 +38,7 @@ public class GraphAlgorithmConsole {
                     generateHospitalFiles(sc);
                     break;
                 case 3:
+                    generateRandomGraphs(sc);
                     break;
                 case 4:
                     System.out.println("Exiting...");
@@ -45,7 +46,6 @@ public class GraphAlgorithmConsole {
                 default:
                     System.out.println("ERROR: Please choose a valid option.");
             }
-            System.out.println();
         } while (menuOption != 4);
     }
 
@@ -55,7 +55,6 @@ public class GraphAlgorithmConsole {
         int[] hospitals;
         int choice;
         do {
-            System.out.println();
             graph = readGraph(sc);
             maxNodeId = Collections.max(graph.keySet());
             hospitals = readHospitals(sc);
@@ -183,6 +182,20 @@ public class GraphAlgorithmConsole {
             System.out.println("Error occurred when writing file.");
         } catch (NumberFormatException e) {
             System.out.println("Error: Invalid number of hospital nodes.");
+        }
+    }
+
+    private static void generateRandomGraphs(Scanner sc) {
+        try {
+            System.out.print("Enter name of new graph file (e.g. randomGraph.txt): ");
+            String fileName = sc.nextLine();
+            System.out.print("Enter number of nodes: ");
+            int numOfNodes = Integer.parseInt(sc.nextLine());
+            System.out.print("Enter average degree: ");
+            int avgDegree = Integer.parseInt(sc.nextLine());
+            GraphGenerator.generateRandomGraphFile(numOfNodes, avgDegree, fileName);
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Please enter a number.");
         }
     }
 }

@@ -25,18 +25,6 @@ import java.util.Scanner;
 public class GraphGenerator {
 
     /**
-     * Basically generates and stores a random graph into randomGraph.txt,
-     * then calls getGraphFromFile to return the graph in the form of a HashMap
-     * @param numNodes number of nodes in the random graph
-     * @param avgDegree average degree of each node in the random graph
-     * @return HashMap<Integer, ArrayList<Integer>> where node ID is key and neighbours are values
-     */
-    public static HashMap<Integer, ArrayList<Integer>> getRandomGraph(int numNodes, int avgDegree) {
-        generateRandomGraphFile(numNodes, avgDegree, "randomGraph.txt");
-        return getGraphFromFile("data/randomGraph.txt");
-    }
-
-    /**
      * Reads from a text file (roughly same format as real road network file) and returns a HashMap of the graph
      * @param fileName
      * @return HashMap<Integer, ArrayList<Integer>> where node ID is key and neighbours are values
@@ -72,12 +60,21 @@ public class GraphGenerator {
         }
     }
 
-    private static void generateRandomGraphFile(int numNodes, int avgDegree, String fileName) {
+    /**
+     * Generates a random graph file in the same format as the real road network file<br>
+     * Issue: Number of nodes generated is numNodes + avgDegree + 1 (not sure why)
+     * @param numNodes number of nodes in the random graph
+     * @param avgDegree average degree of each node in the random graph
+     * @param fileName name of file to save graph into
+     */
+    public static void generateRandomGraphFile(int numNodes, int avgDegree, String fileName) {
         Graph graph = randomGraph(numNodes, avgDegree);
         try {
             FileWriter writer = new FileWriter("data/graphs/"+fileName);
             int numOfNodes = graph.getNodeCount();
             int numOfEdges = graph.getEdgeCount();
+            writer.write("# Directed graph (each unordered pair of nodes is saved once): " + fileName + "\n");
+            writer.write("# Random graph\n");
             writer.write("# Nodes: " + numOfNodes + " Edges: " + numOfEdges + "\n");
             writer.write("# FromNodeId\tToNodeId\n");
             for (int i = 0; i < numOfNodes; i++) {
@@ -89,8 +86,9 @@ public class GraphGenerator {
                 }
             }
             writer.close();
+            System.out.println("Random graph successfully generated.");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Error occurred when writing file.");
         }
     }
 
