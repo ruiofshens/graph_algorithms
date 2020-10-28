@@ -7,19 +7,15 @@ import java.util.*;
  */
 public class BFS_k {
     // prints BFS traversal from a given source s
-    public static int [][] search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj, int k)
+    public static int [][] search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj, int maxNodeID, int k)
     {
-        int V = adj.size();
-
-        // Contains the lengths of paths to k nearest hospitals
-        int [][] pathLengths = new int [V][k];
+        int V = maxNodeID + 1; //the upper limit of the node ID
+        int numNodes = adj.size(); //the actual number of nodes in the graph
+        // Contains the lengths of paths to k nearest hospitals. The last element is the number of hospitals visited
+        int [][] pathLengths = new int [V][k+1];
 
         // Record all the hospitals that have visited the node
         int [][] listHospitalsVisited = new int [V][k];
-
-        // Record the current number of hospitals visited the node
-        int [] numHospitalVisited = new int[V];
-
 
         // Mark all the vertices as not visited by any hospital
         int num_hospitals = hospitals.length; //the total number of hospitals
@@ -29,7 +25,7 @@ public class BFS_k {
         boolean [] isEnqueued = new boolean[V];
 
         // Integer to keep track of when all nodes have been filled with k hospitals
-        int checkAllFilled = V;
+        int checkAllFilled = numNodes;
 
         // Create a queue for BFS
         LinkedList<Integer> queue = new LinkedList<>();
@@ -45,9 +41,9 @@ public class BFS_k {
             visited[hospital][hospitalIndex] = true;
             queue.add(hospital);
             isEnqueued[hospital] = true;
-            pathLengths[hospital][0] = 1; // a path length is always positive. 0 indicates no paths
+            pathLengths[hospital][0] = 0; // a path length is always positive. 0 indicates no paths
             listHospitalsVisited[hospital][0] = hospital;
-            numHospitalVisited[hospital] = 1;
+            pathLengths[hospital][k] = 1; // the kth element of pathLengths store the number of hospitals visited
         }
 
         int currentNode;
@@ -66,7 +62,7 @@ public class BFS_k {
             currentHospitalsVisited = listHospitalsVisited[currentNode];
 //            System.out.println("hospital visited at current node: " + Arrays.toString(currentHospitalsVisited));
 
-            currentNumHospitalVisited = numHospitalVisited[currentNode];
+            currentNumHospitalVisited = pathLengths[currentNode][k];
             // Get all adjacent vertices of the dequeued vertex s
             // If a adjacent has not been visited by the hospital, and number of currentHospitalsVisited is not k,
             // then mark it visited by that hospital, and append the hospital to listHospitalsVisited associated with the node
@@ -79,7 +75,7 @@ public class BFS_k {
                      int pathLengthToHospital = currentPathLengths[i];
 //                        System.out.println("number of hospital visited at child node: " + numHospitalVisited[n]);
 //                        System.out.println("visited by this hospital before: " + visited[n][hospital]);
-                        if (!visited[n][hospitalIndexes.get(hospital)] && numHospitalVisited[n] < k) {
+                        if (!visited[n][hospitalIndexes.get(hospital)] && pathLengths[n][k] < k) {
                             visited[n][hospitalIndexes.get(hospital)] = true;
 
                             // If node not in queue, enqueue
@@ -89,10 +85,10 @@ public class BFS_k {
                             }
 
                             // Put the hospital to the next index in the array hospitalVisited
-                            listHospitalsVisited[n][numHospitalVisited[n]] = hospital;
-                            pathLengths[n][numHospitalVisited[n]] = pathLengthToHospital + 1;
-                            numHospitalVisited[n] += 1;
-                            if (numHospitalVisited[n] == k) {
+                            listHospitalsVisited[n][pathLengths[n][k]] = hospital;
+                            pathLengths[n][pathLengths[n][k]] = pathLengthToHospital + 1;
+                            pathLengths[n][k] += 1;
+                            if (pathLengths[n][k] == k) {
                                 checkAllFilled -= 1;
 //                                System.out.println(checkAllFilled);
                             }
@@ -124,9 +120,10 @@ public class BFS_k {
 
         int numNodes = 12;
         int [] hospitals = {0,8,7};
-        int k = 2;
+        int k = 4;
+        int maxNodeId = numNodes - 1;
 
-        int[][] pathLengths = BFS_k.search(hospitals, adj, k);
+        int[][] pathLengths = BFS_k.search(hospitals, adj, maxNodeId, k);
         for (int i = 0; i < numNodes; i ++) {
             System.out.print("Node " + i + ": ");
             System.out.println(Arrays.toString(pathLengths[i]));
