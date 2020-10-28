@@ -78,7 +78,7 @@ public class GraphAlgorithmConsole {
                         }
                         break;
                     case 2:
-                        int[][] pathLengths = BFS_k.search(hospitals, graph, 2);
+                        int[][] pathLengths = BFS_k.search(hospitals, graph, maxNodeId,2);
                         for (int i = 0; i < graph.size(); i++) {
                             System.out.print("Node " + i + ": ");
                             System.out.println(Arrays.toString(pathLengths[i]));
@@ -95,7 +95,7 @@ public class GraphAlgorithmConsole {
                                 System.out.println("Please enter a number.");
                             }
                         }
-                        pathLengths = BFS_k.search(hospitals, graph, k);
+                        pathLengths = BFS_k.search(hospitals, graph, maxNodeId, k);
                         for (int i = 0; i < graph.size(); i++) {
                             System.out.print("Node " + i + ": ");
                             System.out.println(Arrays.toString(pathLengths[i]));
