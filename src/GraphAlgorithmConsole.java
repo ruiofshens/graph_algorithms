@@ -54,6 +54,7 @@ public class GraphAlgorithmConsole {
         int maxNodeId; // largest node id, since largest node id >= number of nodes
         int[] hospitals;
         int choice;
+        String output;
         do {
             graph = readGraph(sc);
             maxNodeId = Collections.max(graph.keySet());
@@ -64,7 +65,6 @@ public class GraphAlgorithmConsole {
                         "|Enter '1' for Question (a) + (b)|\n" +
                         "|Enter '2' for Question (c)      |\n" +
                         "|Enter '3' for Question (d)      |\n" +
-                        "|Enter '4' for Brute Force BFS   |\n" +
                         "==================================");
                 try {
                     choice = Integer.parseInt(sc.nextLine());
@@ -73,17 +73,12 @@ public class GraphAlgorithmConsole {
                 }
                 switch (choice) {
                     case 1:
-                        ArrayList<Integer>[] result = BFS.search(hospitals, graph, maxNodeId);
-                        for (ArrayList<Integer> path : result) {
-                            System.out.println(path);
-                        }
+                        output = BFS.search(hospitals, graph, maxNodeId);
+                        System.out.println(output);
                         break;
                     case 2:
-                        int[][] pathLengths = BFS_k.search(hospitals, graph, maxNodeId,2);
-                        for (int i = 0; i < graph.size(); i++) {
-                            System.out.print("Node " + i + ": ");
-                            System.out.println(Arrays.toString(pathLengths[i]));
-                        }
+                        output = BFS_k.search(hospitals, graph, maxNodeId,2);
+                        System.out.println(output);
                         break;
                     case 3:
                         System.out.print("Enter k: ");
@@ -96,14 +91,8 @@ public class GraphAlgorithmConsole {
                                 System.out.println("Please enter a number.");
                             }
                         }
-                        pathLengths = BFS_k.search(hospitals, graph, maxNodeId, k);
-                        for (int i = 0; i < graph.size(); i++) {
-                            System.out.print("Node " + i + ": ");
-                            System.out.println(Arrays.toString(pathLengths[i]));
-                        }
-                        break;
-                    case 4:
-                        BruteForceBFS.nearestPath(graph, maxNodeId, hospitals);
+                        output = BFS_k.search(hospitals, graph, maxNodeId, k);
+                        System.out.println(output);
                         break;
                     default:
                         System.out.println("Please enter a valid option.");
