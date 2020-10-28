@@ -64,6 +64,7 @@ public class GraphAlgorithmConsole {
                         "|Enter '1' for Question (a) + (b)|\n" +
                         "|Enter '2' for Question (c)      |\n" +
                         "|Enter '3' for Question (d)      |\n" +
+                        "|Enter '4' for Brute Force BFS   |\n" +
                         "==================================");
                 try {
                     choice = Integer.parseInt(sc.nextLine());
@@ -101,6 +102,12 @@ public class GraphAlgorithmConsole {
                             System.out.println(Arrays.toString(pathLengths[i]));
                         }
                         break;
+                    case 4:
+                        BruteForceBFS.nearestPath(graph, maxNodeId, hospitals);
+                        break;
+                    default:
+                        System.out.println("Please enter a valid option.");
+                        continue;
                 }
                 System.out.print("\nType 'y' to continue using the same graph and hospital files, any keys otherwise: ");
             } while (sc.nextLine().equals("y"));
@@ -111,9 +118,9 @@ public class GraphAlgorithmConsole {
     private static HashMap<Integer, ArrayList<Integer>> readGraph(Scanner sc) {
         HashMap<Integer, ArrayList<Integer>> graph = null;
         while (graph == null) {
-            System.out.print("Enter name of file1 (e.g. file1.txt): ");
+            System.out.print("Enter name of graph file (e.g. file1.txt): ");
             String fileName = sc.nextLine();
-            System.out.println("Reading file1...");
+            System.out.println("Reading graph...");
             graph = GraphGenerator.getGraphFromFile("data/graphs/"+fileName);
         }
         return graph;
@@ -122,9 +129,9 @@ public class GraphAlgorithmConsole {
     private static int[] readHospitals(Scanner sc) {
         while (true) {
             try {
-                System.out.print("Enter name of file2 (e.g. file2.txt): ");
+                System.out.print("Enter name of hospital file (e.g. file2.txt): ");
                 String fileName = sc.nextLine();
-                System.out.println("Reading file2...");
+                System.out.println("Reading hospitals...");
                 File file = new File("data/hospitals/" + fileName);
                 Scanner fileSc = new Scanner((file));
 
@@ -143,28 +150,10 @@ public class GraphAlgorithmConsole {
     }
 
     private static void generateHospitalFiles(Scanner sc) {
-        ArrayList<Integer> nodes = new ArrayList<>();
         Random random = new Random();
-
-        System.out.print("Enter the graph file to generate hospitals for (e.g. graph.txt): ");
-        try {
-            File graphFile = new File("data/graphs/"+sc.nextLine());
-            System.out.println("Reading graph file...");
-            Scanner graphSc = new Scanner(graphFile);
-            while (graphSc.hasNextLine()) {
-                String nextLine = graphSc.nextLine();
-                if (nextLine.startsWith("#")) {
-                    continue;
-                }
-                int node1 = Integer.valueOf(nextLine.split("\\s+")[0]);
-                int node2 = Integer.valueOf(nextLine.split("\\s+")[1]);
-                if (!nodes.contains(node1)) {
-                    nodes.add(node1);
-                }
-                if (!nodes.contains(node2)) {
-                    nodes.add(node2);
-                }
-            }
+        try{
+            HashMap<Integer, ArrayList<Integer>> graph = readGraph(sc);
+            ArrayList<Integer> nodes = new ArrayList<>(graph.keySet());
             System.out.print("Enter name of new hospital file (e.g. hospital.txt): ");
             FileWriter writer = new FileWriter("data/hospitals/"+sc.nextLine());
             System.out.print("Enter number of hospital nodes: ");
@@ -175,9 +164,6 @@ public class GraphAlgorithmConsole {
             }
             writer.close();
             System.out.println("Hospital file successfully created.");
-
-        } catch (FileNotFoundException e) {
-            System.out.println("Error: File not found.");
         } catch (IOException e) {
             System.out.println("Error occurred when writing file.");
         } catch (NumberFormatException e) {
