@@ -88,9 +88,9 @@ public class BFS {
                 output.append("Node " + node + ": ");
                 ArrayList<Integer> path = paths[node];
                 if (path.size() == 0) {
-                    output.append("No connection to hospital found.\n\tDistance: NIL");
+                    output.append("No connection to hospital found.\n\tDistance: NIL\n");
                 } else if (path.get(0) == -1) {
-                    output.append("Node does not exist in the graph\n\tDistance: NIL");
+                    output.append("Node does not exist in the graph\n\tDistance: NIL\n");
                 } else {
                     for (int i = 0; i < path.size() - 1; i++) {
                         output.append(path.get(i) + ", ");

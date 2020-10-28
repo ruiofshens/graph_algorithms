@@ -29,7 +29,6 @@ public class GraphAlgorithmConsole {
             } catch (Exception e) {
                 System.out.println("ERROR: Please choose a valid option.");
             }
-            System.out.println();
             switch (menuOption) {
                 case 1:
                     testAlgorithms(sc);
@@ -55,7 +54,10 @@ public class GraphAlgorithmConsole {
         int[] hospitals;
         int choice;
         String output;
+        long startTime;
+        long endTime;
         do {
+            System.out.println();
             graph = readGraph(sc);
             maxNodeId = Collections.max(graph.keySet());
             hospitals = readHospitals(sc);
@@ -73,10 +75,16 @@ public class GraphAlgorithmConsole {
                 }
                 switch (choice) {
                     case 1:
+                        startTime = System.nanoTime();
                         BFS.search(hospitals, graph, maxNodeId);
+                        endTime = System.nanoTime();
+                        System.out.println("Time taken: " + ((endTime - startTime)/ (double) 1000000) + "ms");
                         break;
                     case 2:
+                        startTime = System.nanoTime();
                         BFS_k.search(hospitals, graph, maxNodeId,2);
+                        endTime = System.nanoTime();
+                        System.out.println("Time taken: " + ((endTime - startTime)/ (double) 1000000) + "ms");
                         break;
                     case 3:
                         System.out.print("Enter k: ");
@@ -89,7 +97,10 @@ public class GraphAlgorithmConsole {
                                 System.out.println("Please enter a number.");
                             }
                         }
+                        startTime = System.nanoTime();
                         BFS_k.search(hospitals, graph, maxNodeId, k);
+                        endTime = System.nanoTime();
+                        System.out.println("Time taken: " + ((endTime - startTime)/ (double) 1000000) + "ms");
                         break;
                     default:
                         System.out.println("Please enter a valid option.");
@@ -145,8 +156,16 @@ public class GraphAlgorithmConsole {
             System.out.print("Enter number of hospital nodes: ");
             int numOfHospitals = Integer.parseInt(sc.nextLine());
             writer.write("# " + numOfHospitals + "\n");
+            ArrayList<Integer> selectedNodes = new ArrayList<>();
+            int randomHospital;
             for (int i = 0; i < numOfHospitals; i++) {
-                writer.write(nodes.get(random.nextInt(nodes.size())) + "\n");
+                randomHospital = nodes.get(random.nextInt(nodes.size()));
+                if (!selectedNodes.contains(randomHospital)) {
+                    selectedNodes.add(randomHospital);
+                    writer.write(randomHospital + "\n");
+                } else {
+                    i--;
+                }
             }
             writer.close();
             System.out.println("Hospital file successfully created.");
