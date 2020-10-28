@@ -198,4 +198,18 @@ public class GraphAlgorithmConsole {
             System.out.println("Error: Please enter a number.");
         }
     }
+
+    private static void writeToFile(String toFile) {
+        try {
+            File myObj = new File("output.txt");
+            myObj.createNewFile();
+            FileWriter myWriter = new FileWriter("output.txt");
+            myWriter.write(toFile);
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
+    }
 }
