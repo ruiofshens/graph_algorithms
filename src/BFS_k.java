@@ -1,8 +1,11 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 public class BFS_k {
     // find the lengths of shortest paths from each node to k-nearest hospitals
-    public static String search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj, int maxNodeID, int k)
+    public static void search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj, int maxNodeID, int k)
     {
         int V = maxNodeID + 1; //the upper limit of the node ID
         int numNodes = adj.size(); //the actual number of nodes in the graph
@@ -93,10 +96,15 @@ public class BFS_k {
                     }
                 }
             }
-        return outputResults(pathLengths, adj, maxNodeID, k);
+        outputResults(pathLengths, adj, maxNodeID, k);
     }
 
-    private static String outputResults(int[][] pathLengths, HashMap<Integer, ArrayList<Integer>> adj, int maxNodeId, int k) {
+    private static void outputResults(int[][] pathLengths, HashMap<Integer, ArrayList<Integer>> adj, int maxNodeId, int k) {
+        try {
+            System.out.println("Writing to file BFSKresults");
+            File myObj = new File("BFSKresults.txt");
+            myObj.createNewFile();
+            FileWriter myWriter = new FileWriter("BFSKresults.txt");
         System.out.println("Distance from each node to " + k + " nearest hospitals.");
         for (int node = 0; node < maxNodeId+1; node++) {
             if (!adj.containsKey(node)) {
@@ -109,6 +117,11 @@ public class BFS_k {
             System.out.println(pathLengths[node][pathLengths[node].length-2]);
             System.out.println("\tNumber of hospitals within reach: " + pathLengths[node][pathLengths[node].length-1]);
         }
-        return "";
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 }

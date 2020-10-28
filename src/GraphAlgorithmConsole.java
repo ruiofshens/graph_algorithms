@@ -73,12 +73,10 @@ public class GraphAlgorithmConsole {
                 }
                 switch (choice) {
                     case 1:
-                        output = BFS.search(hospitals, graph, maxNodeId);
-                        System.out.println(output);
+                        BFS.search(hospitals, graph, maxNodeId);
                         break;
                     case 2:
-                        output = BFS_k.search(hospitals, graph, maxNodeId,2);
-                        System.out.println(output);
+                        BFS_k.search(hospitals, graph, maxNodeId,2);
                         break;
                     case 3:
                         System.out.print("Enter k: ");
@@ -91,8 +89,7 @@ public class GraphAlgorithmConsole {
                                 System.out.println("Please enter a number.");
                             }
                         }
-                        output = BFS_k.search(hospitals, graph, maxNodeId, k);
-                        System.out.println(output);
+                        BFS_k.search(hospitals, graph, maxNodeId, k);
                         break;
                     default:
                         System.out.println("Please enter a valid option.");
@@ -171,20 +168,6 @@ public class GraphAlgorithmConsole {
             GraphGenerator.generateRandomGraphFile(numOfNodes, avgDegree, fileName);
         } catch (NumberFormatException e) {
             System.out.println("Error: Please enter a number.");
-        }
-    }
-
-    private static void writeToFile(String toFile) {
-        try {
-            File myObj = new File("output.txt");
-            myObj.createNewFile();
-            FileWriter myWriter = new FileWriter("output.txt");
-            myWriter.write(toFile);
-            myWriter.close();
-            System.out.println("Successfully wrote to the file.");
-        } catch (IOException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
         }
     }
 }
