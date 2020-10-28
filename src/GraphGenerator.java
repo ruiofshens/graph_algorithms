@@ -10,6 +10,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
@@ -29,13 +30,13 @@ public class GraphGenerator {
      * @param fileName
      * @return HashMap<Integer, ArrayList<Integer>> where node ID is key and neighbours are values
      */
-    public static HashMap<Integer, ArrayList<Integer>> getGraphFromFile(String fileName) {
+    public static HashMap<Integer, LinkedList<Integer>> getGraphFromFile(String fileName) {
         try {
             File graphFile = new File(fileName);
             Scanner sc = new Scanner(graphFile);
             String nextLine;
             int node1, node2;
-            HashMap<Integer, ArrayList<Integer>> adjList = new HashMap<>();
+            HashMap<Integer, LinkedList<Integer>> adjList = new HashMap<>();
             while (sc.hasNextLine()) {
                 nextLine = sc.nextLine();
                 if (nextLine.startsWith("#")) { // remove headers
@@ -43,15 +44,20 @@ public class GraphGenerator {
                 }
                 node1 = Integer.valueOf(nextLine.split("\\s+")[0]);
                 node2 = Integer.valueOf(nextLine.split("\\s+")[1]);
-                if (adjList.get(node1) == null) {
-                    adjList.put(node1, new ArrayList<>());
-                }
-                if (adjList.get(node2) == null) {
-                    adjList.put(node2, new ArrayList<>());
-                }
-                if (!adjList.get(node1).contains(node2)) {
+                try{
                     adjList.get(node1).add(node2);
+                } catch (Exception e) {
+                    adjList.put(node1, new LinkedList<>());
                 }
+//                if (adjList.get(node1) == null) {
+//                    adjList.put(node1, new ArrayList<>());
+//                }
+//                if (adjList.get(node2) == null) {
+//                    adjList.put(node2, new ArrayList<>());
+//                }
+//                if (!adjList.get(node1).contains(node2)) {
+//                    adjList.get(node1).add(node2);
+//                }
             }
             return adjList;
         } catch (FileNotFoundException e) {
@@ -107,7 +113,7 @@ public class GraphGenerator {
 
     // for testing
     public static void main(String[] args) {
-        HashMap<Integer, ArrayList<Integer>> test = getGraphFromFile("data/graphs/test.txt");
+        HashMap<Integer, LinkedList<Integer>> test = getGraphFromFile("data/graphs/test.txt");
         int n = test.size();
         for (int i = 0; i < n; i++) {
             if (test.get(i) == null) {
