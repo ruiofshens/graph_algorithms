@@ -73,8 +73,8 @@ public class GraphAlgorithmConsole {
                 }
                 switch (choice) {
                     case 1:
-                        LinkedList<Integer>[] result = BFS.search(hospitals, graph, maxNodeId);
-                        for (LinkedList<Integer> path : result) {
+                        ArrayList<Integer>[] result = BFS.search(hospitals, graph, maxNodeId);
+                        for (ArrayList<Integer> path : result) {
                             System.out.println(path);
                         }
                         break;

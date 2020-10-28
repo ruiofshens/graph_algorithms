@@ -19,14 +19,14 @@ public class BFS {
      * contains a value of -1 if the node id is not present in the graph, and is an empty LinkedList if the node is
      * present in the graph, but is not connected to a hospital
      */
-    public static LinkedList<Integer>[] search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj, int maxNodeId)
+    public static ArrayList<Integer>[] search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj, int maxNodeId)
     {
         // For each node, the path to the nearest hospital
-        LinkedList<Integer>[] paths = new LinkedList[maxNodeId+1];
+        ArrayList<Integer>[] paths = new ArrayList[maxNodeId+1];
 
         // Initialize shortest paths for all nodes
         for (int i=0; i<maxNodeId+1; i++) {
-            paths[i] = new LinkedList<>();
+            paths[i] = new ArrayList<>();
             // If node id is not present in the graph, we indicate this with a -1 in the path
             if (!adj.containsKey(i)) paths[i].add(-1);
         }
@@ -46,7 +46,7 @@ public class BFS {
 
         // Initialize variables to be used in loop
         int currentNode;
-        LinkedList<Integer> currentPath;
+        ArrayList<Integer> currentPath;
         while (queue.size() != 0)
         {
             // Dequeue a vertex from queue and print it
