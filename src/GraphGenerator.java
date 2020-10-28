@@ -48,7 +48,6 @@ public class GraphGenerator {
                     adjList.get(node1).add(node2);
                 } catch (Exception e) {
                     adjList.put(node1, new ArrayList<>());
-                    adjList.get(node1).add(node2);
                 }
             }
             return adjList;

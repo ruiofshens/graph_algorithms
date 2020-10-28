@@ -19,7 +19,7 @@ public class BFS {
      * contains a value of -1 if the node id is not present in the graph, and is an empty LinkedList if the node is
      * present in the graph, but is not connected to a hospital
      */
-    public static String search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj, int maxNodeId)
+    public static LinkedList<Integer>[] search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj, int maxNodeId)
     {
         // For each node, the path to the nearest hospital
         LinkedList<Integer>[] paths = new LinkedList[maxNodeId+1];
@@ -68,34 +68,6 @@ public class BFS {
                 }
             }
         }
-        return outputResults(paths, maxNodeId);
-    }
-
-    private static String outputResults(LinkedList<Integer>[] paths, int maxNodeId) {
-//        for (LinkedList<Integer> path : paths) {
-//            System.out.println(path);
-//        }
-        String output = "Results of (a) and (b)\n";
-        output += "Every 2 lines show the node ID, the path to the nearest hospital, and the distance of the path.\n" +
-                "If a node ID does not exist in the graph, then it is indicated with a -1.\n\n";
-
-        for (int node = 0; node < maxNodeId+1; node++) {
-            output += "Node " + node + ": ";
-            LinkedList<Integer> path = paths[node];
-            if (path.size() == 0) {
-                output += "No connection to hospital found.\n";
-                output += "\tDistance: NIL";
-            } else if (path.get(0) == -1) {
-                output += "Node does not exist in the graph\n";
-                output += "\tDistance: NIL";
-            } else {
-                for (int i = 0; i < path.size() - 1; i++) {
-                    output += path.get(i) + ", ";
-                }
-                output += path.get(path.size() - 1) + "\n";
-                output += "\tDistance: " + (path.size() - 1) + "\n";
-            }
-        }
-        return output;
+        return paths;
     }
 }

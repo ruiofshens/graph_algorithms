@@ -54,7 +54,6 @@ public class GraphAlgorithmConsole {
         int maxNodeId; // largest node id, since largest node id >= number of nodes
         int[] hospitals;
         int choice;
-        String output;
         do {
             graph = readGraph(sc);
             maxNodeId = Collections.max(graph.keySet());
@@ -74,9 +73,10 @@ public class GraphAlgorithmConsole {
                 }
                 switch (choice) {
                     case 1:
-                        output = BFS.search(hospitals, graph, maxNodeId);
-                        System.out.println(output);
-                        writeToFile(output);
+                        LinkedList<Integer>[] result = BFS.search(hospitals, graph, maxNodeId);
+                        for (LinkedList<Integer> path : result) {
+                            System.out.println(path);
+                        }
                         break;
                     case 2:
                         int[][] pathLengths = BFS_k.search(hospitals, graph, maxNodeId,2);
