@@ -1,9 +1,5 @@
 import java.util.*;
 
-/**
- * Code is mostly referenced from online
- * Modified to include multiple sources, and to return the paths
- */
 public class BFS_k {
     // find the lengths of shortest paths from each node to k-nearest hospitals
     public static int [][] search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj, int maxNodeID, int k)
