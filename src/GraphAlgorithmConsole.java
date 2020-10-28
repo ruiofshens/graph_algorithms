@@ -50,7 +50,7 @@ public class GraphAlgorithmConsole {
     }
 
     private static void testAlgorithms(Scanner sc) {
-        HashMap<Integer, LinkedList<Integer>> graph;
+        HashMap<Integer, ArrayList<Integer>> graph;
         int maxNodeId; // largest node id, since largest node id >= number of nodes
         int[] hospitals;
         int choice;
@@ -108,8 +108,8 @@ public class GraphAlgorithmConsole {
         } while (sc.nextLine().equals("y"));
     }
 
-    private static HashMap<Integer, LinkedList<Integer>> readGraph(Scanner sc) {
-        HashMap<Integer, LinkedList<Integer>> graph = null;
+    private static HashMap<Integer, ArrayList<Integer>> readGraph(Scanner sc) {
+        HashMap<Integer, ArrayList<Integer>> graph = null;
         while (graph == null) {
             System.out.print("Enter name of file1 (e.g. file1.txt): ");
             String fileName = sc.nextLine();

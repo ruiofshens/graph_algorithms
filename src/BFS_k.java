@@ -6,7 +6,7 @@ import java.util.*;
  */
 public class BFS_k {
     // find the lengths of shortest paths from each node to k-nearest hospitals
-    public static int [][] search(int[] hospitals, HashMap<Integer, LinkedList<Integer>> adj, int maxNodeID, int k)
+    public static int [][] search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj, int maxNodeID, int k)
     {
         int V = maxNodeID + 1; //the upper limit of the node ID
         int numNodes = adj.size(); //the actual number of nodes in the graph

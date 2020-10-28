@@ -30,13 +30,13 @@ public class GraphGenerator {
      * @param fileName
      * @return HashMap<Integer, ArrayList<Integer>> where node ID is key and neighbours are values
      */
-    public static HashMap<Integer, LinkedList<Integer>> getGraphFromFile(String fileName) {
+    public static HashMap<Integer, ArrayList<Integer>> getGraphFromFile(String fileName) {
         try {
             File graphFile = new File(fileName);
             Scanner sc = new Scanner(graphFile);
             String nextLine;
             int node1, node2;
-            HashMap<Integer, LinkedList<Integer>> adjList = new HashMap<>();
+            HashMap<Integer, ArrayList<Integer>> adjList = new HashMap<>();
             while (sc.hasNextLine()) {
                 nextLine = sc.nextLine();
                 if (nextLine.startsWith("#")) { // remove headers
@@ -47,7 +47,7 @@ public class GraphGenerator {
                 try{
                     adjList.get(node1).add(node2);
                 } catch (Exception e) {
-                    adjList.put(node1, new LinkedList<>());
+                    adjList.put(node1, new ArrayList<>());
                 }
 //                if (adjList.get(node1) == null) {
 //                    adjList.put(node1, new ArrayList<>());
@@ -113,7 +113,7 @@ public class GraphGenerator {
 
     // for testing
     public static void main(String[] args) {
-        HashMap<Integer, LinkedList<Integer>> test = getGraphFromFile("data/graphs/test.txt");
+        HashMap<Integer, ArrayList<Integer>> test = getGraphFromFile("data/graphs/test.txt");
         int n = test.size();
         for (int i = 0; i < n; i++) {
             if (test.get(i) == null) {

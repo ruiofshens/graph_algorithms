@@ -19,7 +19,7 @@ public class BFS {
      * contains a value of -1 if the node id is not present in the graph, and is an empty LinkedList if the node is
      * present in the graph, but is not connected to a hospital
      */
-    public static LinkedList<Integer>[] search(int[] hospitals, HashMap<Integer, LinkedList<Integer>> adj, int maxNodeId)
+    public static LinkedList<Integer>[] search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj, int maxNodeId)
     {
         // For each node, the path to the nearest hospital
         LinkedList<Integer>[] paths = new LinkedList[maxNodeId+1];
