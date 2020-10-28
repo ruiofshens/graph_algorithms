@@ -27,7 +27,7 @@ public class GraphGenerator {
 
     /**
      * Reads from a text file (roughly same format as real road network file) and returns a HashMap of the graph
-     * @param fileName
+     * @param fileName Name of the file to retrieve Graph from
      * @return HashMap<Integer, ArrayList<Integer>> where node ID is key and neighbours are values
      */
     public static HashMap<Integer, ArrayList<Integer>> getGraphFromFile(String fileName) {
@@ -49,15 +49,6 @@ public class GraphGenerator {
                 } catch (Exception e) {
                     adjList.put(node1, new ArrayList<>());
                 }
-//                if (adjList.get(node1) == null) {
-//                    adjList.put(node1, new ArrayList<>());
-//                }
-//                if (adjList.get(node2) == null) {
-//                    adjList.put(node2, new ArrayList<>());
-//                }
-//                if (!adjList.get(node1).contains(node2)) {
-//                    adjList.get(node1).add(node2);
-//                }
             }
             return adjList;
         } catch (FileNotFoundException e) {
@@ -68,7 +59,6 @@ public class GraphGenerator {
 
     /**
      * Generates a random graph file in the same format as the real road network file<br>
-     * Issue: Number of nodes generated is numNodes + avgDegree + 1 (not sure why)
      * @param numNodes number of nodes in the random graph
      * @param avgDegree average degree of each node in the random graph
      * @param fileName name of file to save graph into
@@ -98,7 +88,12 @@ public class GraphGenerator {
         }
     }
 
-    // for some reason 3 additional nodes are generated,even though I copied the code
+    /**
+     * Generates a random graph
+     * @param numNodes Number of nodes to be generated for the graph
+     * @param avgDegree Average degree of nodes
+     * @return Graph object generated based on the given parameters
+     */
     private static Graph randomGraph(int numNodes, int avgDegree) {
         Graph graph = new SingleGraph("Random");
         BaseGenerator gen = new RandomGenerator(avgDegree);
@@ -109,20 +104,5 @@ public class GraphGenerator {
         }
         gen.end();
         return graph;
-    }
-
-    // for testing
-    public static void main(String[] args) {
-        HashMap<Integer, ArrayList<Integer>> test = getGraphFromFile("data/graphs/test.txt");
-        int n = test.size();
-        for (int i = 0; i < n; i++) {
-            if (test.get(i) == null) {
-                //System.out.println(i + " doesn't exist");
-                continue;
-            } else {
-                System.out.println(i + ": " + test.get(i));
-            }
-        }
-        System.out.println("size: " + n);
     }
 }
