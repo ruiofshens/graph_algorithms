@@ -3,8 +3,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.Scanner;
 
 public class BFS {
     /**
@@ -50,8 +50,7 @@ public class BFS {
         // Initialize variables to be used in loop
         int currentNode;
         ArrayList<Integer> currentPath;
-        while (queue.size() != 0)
-        {
+        while (queue.size() != 0) {
             // Dequeue a vertex from queue and print it
             currentNode = queue.poll();
             currentPath = paths[currentNode];
@@ -76,10 +75,12 @@ public class BFS {
 
     private static void outputResults(ArrayList<Integer>[] paths, int maxNodeId) {
         try {
-            System.out.println("Writing to file BFSresults.txt");
-            File myObj = new File("BFSresults.txt");
+            System.out.print("Enter name of file to save output to (e.g. BFSresults.txt): ");
+            String fileName = new Scanner(System.in).nextLine();
+            System.out.println("Writing to file " + fileName);
+            File myObj = new File("output/"+fileName);
             myObj.createNewFile();
-            FileWriter myWriter = new FileWriter("BFSresults.txt");
+            FileWriter myWriter = new FileWriter("output/"+fileName);
             myWriter.write("Results of (a) and (b)\n" +
                     "Every 2 lines show the node ID, the path to the nearest hospital, and the distance of the path.\n" +
                     "If a node ID does not exist in the graph, then it is indicated with a -1.\n\n");

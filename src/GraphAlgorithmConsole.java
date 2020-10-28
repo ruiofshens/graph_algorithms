@@ -53,9 +53,6 @@ public class GraphAlgorithmConsole {
         int maxNodeId; // largest node id, since largest node id >= number of nodes
         int[] hospitals;
         int choice;
-        String output;
-        long startTime;
-        long endTime;
         do {
             System.out.println();
             graph = readGraph(sc);
@@ -75,16 +72,10 @@ public class GraphAlgorithmConsole {
                 }
                 switch (choice) {
                     case 1:
-                        startTime = System.nanoTime();
                         BFS.search(hospitals, graph, maxNodeId);
-                        endTime = System.nanoTime();
-                        System.out.println("Time taken: " + ((endTime - startTime)/ (double) 1000000) + "ms");
                         break;
                     case 2:
-                        startTime = System.nanoTime();
                         BFS_k.search(hospitals, graph, maxNodeId,2);
-                        endTime = System.nanoTime();
-                        System.out.println("Time taken: " + ((endTime - startTime)/ (double) 1000000) + "ms");
                         break;
                     case 3:
                         System.out.print("Enter k: ");
@@ -97,10 +88,7 @@ public class GraphAlgorithmConsole {
                                 System.out.println("Please enter a number.");
                             }
                         }
-                        startTime = System.nanoTime();
                         BFS_k.search(hospitals, graph, maxNodeId, k);
-                        endTime = System.nanoTime();
-                        System.out.println("Time taken: " + ((endTime - startTime)/ (double) 1000000) + "ms");
                         break;
                     default:
                         System.out.println("Please enter a valid option.");
