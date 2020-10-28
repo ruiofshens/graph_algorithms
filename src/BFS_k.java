@@ -7,10 +7,10 @@ import java.util.*;
  */
 public class BFS_k {
     // prints BFS traversal from a given source s
-    public static int [][] search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj, int k)
+    public static int [][] search(int[] hospitals, HashMap<Integer, ArrayList<Integer>> adj, int maxNodeID, int k)
     {
-        int V = adj.size();
-
+        int V = maxNodeID + 1; //the upper limit of the node ID
+        int numNodes = adj.size(); //the actual number of nodes in the graph
         // Contains the lengths of paths to k nearest hospitals
         int [][] pathLengths = new int [V][k];
 
@@ -29,7 +29,7 @@ public class BFS_k {
         boolean [] isEnqueued = new boolean[V];
 
         // Integer to keep track of when all nodes have been filled with k hospitals
-        int checkAllFilled = V;
+        int checkAllFilled = numNodes;
 
         // Create a queue for BFS
         LinkedList<Integer> queue = new LinkedList<>();
@@ -125,8 +125,9 @@ public class BFS_k {
         int numNodes = 12;
         int [] hospitals = {0,8,7};
         int k = 2;
+        int maxNodeId = numNodes - 1;
 
-        int[][] pathLengths = BFS_k.search(hospitals, adj, k);
+        int[][] pathLengths = BFS_k.search(hospitals, adj, maxNodeId, k);
         for (int i = 0; i < numNodes; i ++) {
             System.out.print("Node " + i + ": ");
             System.out.println(Arrays.toString(pathLengths[i]));
