@@ -87,15 +87,16 @@ public class BenchmarkApp {
                             endTime = System.nanoTime();
                             timings.add((endTime-startTime)/1000000);
                         }
+                        System.out.println("Median timing: " + timings.get(timings.size()/2));
                         break;
                     default:
                         System.out.println("Please enter a valid option.");
                         continue;
                 }
-                System.out.print("\nType 'y' to continue using the same graph and hospital files, any keys otherwise: ");
-            } while (sc.nextLine().equals("y"));
-            System.out.print("\nType 'y' to use another graph, any keys otherwise: ");
-        } while (sc.nextLine().equals("y"));
+                //System.out.print("\nType 'y' to continue using the same graph and hospital files, any keys otherwise: ");
+            } while (1 == 0); // forces restart of app to start a new test
+            //System.out.print("\nType 'y' to use another graph, any keys otherwise: ");
+        } while (1 == 0); // forces restart of app to start a new test
     }
 
     private static HashMap<Integer, ArrayList<Integer>> readGraph(Scanner sc) {

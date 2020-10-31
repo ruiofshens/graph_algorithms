@@ -81,15 +81,19 @@ public class BFS {
             File myObj = new File("output/"+fileName);
             myObj.createNewFile();
             FileWriter myWriter = new FileWriter("output/"+fileName);
-            myWriter.write("Results of (a) and (b)\n" +
-                    "Every 2 lines show the node ID, the path to the nearest hospital, and the distance of the path.\n" +
-                    "If a node ID does not exist in the graph, then it is indicated with a -1.\n\n");
+            myWriter.write("Results of parts (a) and (b).\n" +
+                    "Format of the output is as follows:\n" +
+                    "Node #: node1, node2, ... nodeHospital\n" +
+                    "\tDistance: <number of edges to nodeHospital>\n" +
+                    "If a node ID does not exist in the graph, or a node is not connected to any hospitals, " +
+                    "their distances are recorded with a NIL.\n" +
+                    "If a node is a hospital node, the distance will be 0.\n\n");
             for (int node = 0; node < maxNodeId+1; node++) {
                 StringBuilder output = new StringBuilder();
                 output.append("Node " + node + ": ");
                 ArrayList<Integer> path = paths[node];
                 if (path.size() == 0) {
-                    output.append("No connection to hospital found.\n\tDistance: NIL\n");
+                    output.append("No connection to any hospital found\n\tDistance: NIL\n");
                 } else if (path.get(0) == -1) {
                     output.append("Node does not exist in the graph\n\tDistance: NIL\n");
                 } else {

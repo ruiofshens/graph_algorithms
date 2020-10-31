@@ -4,16 +4,15 @@ import java.io.IOException;
 import java.util.*;
 import java.io.File;
 
-//TODO: Decide on output format
-//TODO: GUI/Graph visualization?
 public class GraphAlgorithmConsole {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Welcome to our application!");
-        System.out.println("Ensure graph text files (file1) are placed under data/graphs,");
-        System.out.println("and hospital text files (file2) are placed under data/hospitals");
+        System.out.println("Ensure graph text files (file1) are placed under data/graphs, " +
+                "and hospital text files (file2) are placed under data/hospitals.");
+        System.out.println("All results are stored in under the folder output.");
 
         int menuOption = -1;
         do {
@@ -27,7 +26,8 @@ public class GraphAlgorithmConsole {
             try {
                 menuOption = Integer.parseInt(sc.nextLine());
             } catch (Exception e) {
-                System.out.println("ERROR: Please choose a valid option.");
+                System.out.println("ERROR: Please enter a number.");
+                continue;
             }
             switch (menuOption) {
                 case 1:
@@ -65,6 +65,7 @@ public class GraphAlgorithmConsole {
                         "|Enter '2' for Question (c)      |\n" +
                         "|Enter '3' for Question (d)      |\n" +
                         "==================================");
+                System.out.print("Choose an algorithm: ");
                 try {
                     choice = Integer.parseInt(sc.nextLine());
                 } catch (NumberFormatException e) {
@@ -92,7 +93,6 @@ public class GraphAlgorithmConsole {
                         break;
                     default:
                         System.out.println("Please enter a valid option.");
-                        continue;
                 }
                 System.out.print("\nType 'y' to continue using the same graph and hospital files, any keys otherwise: ");
             } while (sc.nextLine().equals("y"));

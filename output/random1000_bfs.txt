@@ -1,0 +1,2019 @@
+Results of parts (a) and (b).
+Format of the output is as follows:
+Node #: node1, node2, ... nodeHospital
+	Distance: <number of edges to nodeHospital>
+If a node ID does not exist in the graph, or a node is not connected to any hospitals, their distances are recorded with a NIL.
+If a node is a hospital node, the distance will be 0.
+
+Node 0: 0, 918, 503
+	Distance: 2
+Node 1: 1, 704, 627
+	Distance: 2
+Node 2: 2, 391, 189, 627
+	Distance: 3
+Node 3: 3, 683, 272, 286, 503
+	Distance: 4
+Node 4: 4, 1, 704, 627
+	Distance: 3
+Node 5: 5, 188, 120, 503
+	Distance: 3
+Node 6: 6, 564, 189, 627
+	Distance: 3
+Node 7: 7, 185, 711, 819, 32
+	Distance: 4
+Node 8: 8, 894, 964
+	Distance: 2
+Node 9: 9, 163, 679, 120, 503
+	Distance: 4
+Node 10: 10, 639, 853, 32
+	Distance: 3
+Node 11: 11, 358, 627
+	Distance: 2
+Node 12: 12, 875, 814, 286, 503
+	Distance: 4
+Node 13: 13, 249, 627
+	Distance: 2
+Node 14: 14, 507, 29, 303, 503
+	Distance: 4
+Node 15: 15, 825, 272, 286, 503
+	Distance: 4
+Node 16: 16, 420, 120, 503
+	Distance: 3
+Node 17: 17, 217, 115
+	Distance: 2
+Node 18: 18, 550, 189, 627
+	Distance: 3
+Node 19: 19, 647, 618, 964
+	Distance: 3
+Node 20: 20, 823, 232, 43, 115
+	Distance: 4
+Node 21: 21, 243, 249, 627
+	Distance: 3
+Node 22: 22, 335, 338, 630, 503
+	Distance: 4
+Node 23: 23, 934, 672, 120, 503
+	Distance: 4
+Node 24: 24, 751, 263, 354, 503
+	Distance: 4
+Node 25: 25, 227, 646, 964
+	Distance: 3
+Node 26: 26, 970, 618, 964
+	Distance: 3
+Node 27: 27, 293, 207, 115
+	Distance: 3
+Node 28: 28, 465, 272, 286, 503
+	Distance: 4
+Node 29: 29, 303, 503
+	Distance: 2
+Node 30: 30, 519, 508, 630, 503
+	Distance: 4
+Node 31: 31, 939, 646, 964
+	Distance: 3
+Node 32: 32
+	Distance: 0
+Node 33: 33, 476, 745, 171, 964
+	Distance: 4
+Node 34: 34, 5, 188, 120, 503
+	Distance: 4
+Node 35: 35, 733, 646, 964
+	Distance: 3
+Node 36: 36, 508, 630, 503
+	Distance: 3
+Node 37: 37, 630, 503
+	Distance: 2
+Node 38: 38, 596, 396, 286, 503
+	Distance: 4
+Node 39: 39, 564, 189, 627
+	Distance: 3
+Node 40: 40, 894, 964
+	Distance: 2
+Node 41: 41, 195, 672, 120, 503
+	Distance: 4
+Node 42: 42, 17, 217, 115
+	Distance: 3
+Node 43: 43, 115
+	Distance: 1
+Node 44: 44, 169, 736, 32
+	Distance: 3
+Node 45: 45, 470, 40, 894, 964
+	Distance: 4
+Node 46: 46, 727, 396, 286, 503
+	Distance: 4
+Node 47: 47, 734, 217, 115
+	Distance: 3
+Node 48: Node does not exist in the graph
+	Distance: NIL
+Node 49: 49, 663, 207, 115
+	Distance: 3
+Node 50: 50, 965, 775, 503
+	Distance: 3
+Node 51: 51, 508, 630, 503
+	Distance: 3
+Node 52: 52, 207, 115
+	Distance: 2
+Node 53: 53, 758, 403, 630, 503
+	Distance: 4
+Node 54: 54, 566, 814, 286, 503
+	Distance: 4
+Node 55: 55, 547, 578, 217, 115
+	Distance: 4
+Node 56: 56, 775, 503
+	Distance: 2
+Node 57: 57, 826, 29, 303, 503
+	Distance: 4
+Node 58: 58, 560, 71, 618, 964
+	Distance: 4
+Node 59: 59, 679, 120, 503
+	Distance: 3
+Node 60: 60, 871, 171, 964
+	Distance: 3
+Node 61: 61, 129, 604, 646, 964
+	Distance: 4
+Node 62: 62, 497, 243, 249, 627
+	Distance: 4
+Node 63: 63, 219, 853, 32
+	Distance: 3
+Node 64: 64, 337, 358, 627
+	Distance: 3
+Node 65: 65, 396, 286, 503
+	Distance: 3
+Node 66: 66, 493, 514, 217, 115
+	Distance: 4
+Node 67: 67, 29, 303, 503
+	Distance: 3
+Node 68: 68, 686, 286, 503
+	Distance: 3
+Node 69: 69, 219, 853, 32
+	Distance: 3
+Node 70: 70, 391, 189, 627
+	Distance: 3
+Node 71: 71, 618, 964
+	Distance: 2
+Node 72: 72, 622, 517, 249, 627
+	Distance: 4
+Node 73: 73, 90, 985, 29, 303, 503
+	Distance: 5
+Node 74: 74, 558, 686, 286, 503
+	Distance: 4
+Node 75: 75, 427, 974, 775, 503
+	Distance: 4
+Node 76: 76, 133, 213, 653, 964
+	Distance: 4
+Node 77: 77, 452, 679, 120, 503
+	Distance: 4
+Node 78: 78, 615, 161, 145, 618, 964
+	Distance: 5
+Node 79: 79, 286, 503
+	Distance: 2
+Node 80: 80, 190, 441, 43, 115
+	Distance: 4
+Node 81: 81, 437, 338, 630, 503
+	Distance: 4
+Node 82: 82, 37, 630, 503
+	Distance: 3
+Node 83: 83, 720, 974, 775, 503
+	Distance: 4
+Node 84: 84, 583, 354, 503
+	Distance: 3
+Node 85: 85, 606, 613, 918, 503
+	Distance: 4
+Node 86: 86, 11, 358, 627
+	Distance: 3
+Node 87: 87, 421, 322, 618, 964
+	Distance: 4
+Node 88: 88, 465, 272, 286, 503
+	Distance: 4
+Node 89: 89, 337, 358, 627
+	Distance: 3
+Node 90: 90, 985, 29, 303, 503
+	Distance: 4
+Node 91: 91, 158, 646, 964
+	Distance: 3
+Node 92: 92, 717, 618, 964
+	Distance: 3
+Node 93: 93, 551, 354, 503
+	Distance: 3
+Node 94: 94, 550, 189, 627
+	Distance: 3
+Node 95: 95, 933, 142, 32
+	Distance: 3
+Node 96: 96, 145, 618, 964
+	Distance: 3
+Node 97: 97, 747, 316, 930, 354, 503
+	Distance: 5
+Node 98: 98, 733, 646, 964
+	Distance: 3
+Node 99: 99, 736, 32
+	Distance: 2
+Node 100: 100, 825, 272, 286, 503
+	Distance: 4
+Node 101: 101, 720, 974, 775, 503
+	Distance: 4
+Node 102: 102, 824, 704, 627
+	Distance: 3
+Node 103: 103, 359, 969, 120, 503
+	Distance: 4
+Node 104: 104, 442, 736, 32
+	Distance: 3
+Node 105: 105, 318, 358, 627
+	Distance: 3
+Node 106: 106, 516, 717, 618, 964
+	Distance: 4
+Node 107: 107, 834, 142, 32
+	Distance: 3
+Node 108: 108, 820, 207, 115
+	Distance: 3
+Node 109: Node does not exist in the graph
+	Distance: NIL
+Node 110: 110, 210, 811, 120, 503
+	Distance: 4
+Node 111: 111, 634, 411, 303, 503
+	Distance: 4
+Node 112: 112, 630, 503
+	Distance: 2
+Node 113: 113, 324, 765, 354, 503
+	Distance: 4
+Node 114: 114, 898, 207, 115
+	Distance: 3
+Node 115: 115
+	Distance: 0
+Node 116: 116, 953, 778, 420, 120, 503
+	Distance: 5
+Node 117: 117, 232, 43, 115
+	Distance: 3
+Node 118: 118, 17, 217, 115
+	Distance: 3
+Node 119: 119, 570, 142, 32
+	Distance: 3
+Node 120: 120, 503
+	Distance: 1
+Node 121: 121, 689, 487, 303, 503
+	Distance: 4
+Node 122: 122, 833, 189, 627
+	Distance: 3
+Node 123: 123, 564, 189, 627
+	Distance: 3
+Node 124: 124, 272, 286, 503
+	Distance: 3
+Node 125: 125, 396, 286, 503
+	Distance: 3
+Node 126: 126, 346, 147, 303, 503
+	Distance: 4
+Node 127: 127, 439, 672, 120, 503
+	Distance: 4
+Node 128: 128, 445, 139, 142, 32
+	Distance: 4
+Node 129: 129, 604, 646, 964
+	Distance: 3
+Node 130: 130, 711, 819, 32
+	Distance: 3
+Node 131: 131, 550, 189, 627
+	Distance: 3
+Node 132: 132, 31, 939, 646, 964
+	Distance: 4
+Node 133: 133, 213, 653, 964
+	Distance: 3
+Node 134: 134, 720, 974, 775, 503
+	Distance: 4
+Node 135: 135, 321, 630, 503
+	Distance: 3
+Node 136: 136, 158, 646, 964
+	Distance: 3
+Node 137: 137, 594, 293, 207, 115
+	Distance: 4
+Node 138: 138, 50, 965, 775, 503
+	Distance: 4
+Node 139: 139, 142, 32
+	Distance: 2
+Node 140: 140, 814, 286, 503
+	Distance: 3
+Node 141: 141, 310, 508, 630, 503
+	Distance: 4
+Node 142: 142, 32
+	Distance: 1
+Node 143: 143, 819, 32
+	Distance: 2
+Node 144: 144, 67, 29, 303, 503
+	Distance: 4
+Node 145: 145, 618, 964
+	Distance: 2
+Node 146: 146, 285, 532, 618, 964
+	Distance: 4
+Node 147: 147, 303, 503
+	Distance: 2
+Node 148: 148, 139, 142, 32
+	Distance: 3
+Node 149: 149, 303, 503
+	Distance: 2
+Node 150: 150, 736, 32
+	Distance: 2
+Node 151: 151, 711, 819, 32
+	Distance: 3
+Node 152: 152, 71, 618, 964
+	Distance: 3
+Node 153: 153, 509, 517, 249, 627
+	Distance: 4
+Node 154: 154, 93, 551, 354, 503
+	Distance: 4
+Node 155: 155, 517, 249, 627
+	Distance: 3
+Node 156: 156, 644, 930, 354, 503
+	Distance: 4
+Node 157: 157, 325, 330, 32
+	Distance: 3
+Node 158: 158, 646, 964
+	Distance: 2
+Node 159: 159, 206, 243, 249, 627
+	Distance: 4
+Node 160: 160, 322, 618, 964
+	Distance: 3
+Node 161: 161, 145, 618, 964
+	Distance: 3
+Node 162: 162, 43, 115
+	Distance: 2
+Node 163: 163, 679, 120, 503
+	Distance: 3
+Node 164: 164, 766, 354, 503
+	Distance: 3
+Node 165: 165, 990, 618, 964
+	Distance: 3
+Node 166: 166, 810, 765, 354, 503
+	Distance: 4
+Node 167: 167, 65, 396, 286, 503
+	Distance: 4
+Node 168: 168, 490, 489, 171, 964
+	Distance: 4
+Node 169: 169, 736, 32
+	Distance: 2
+Node 170: 170, 65, 396, 286, 503
+	Distance: 4
+Node 171: 171, 964
+	Distance: 1
+Node 172: 172, 613, 918, 503
+	Distance: 3
+Node 173: 173, 57, 826, 29, 303, 503
+	Distance: 5
+Node 174: 174, 378, 188, 120, 503
+	Distance: 4
+Node 175: 175, 56, 775, 503
+	Distance: 3
+Node 176: 176, 883, 686, 286, 503
+	Distance: 4
+Node 177: 177, 43, 115
+	Distance: 2
+Node 178: 178, 745, 171, 964
+	Distance: 3
+Node 179: 179, 603, 439, 672, 120, 503
+	Distance: 5
+Node 180: 180, 970, 618, 964
+	Distance: 3
+Node 181: 181, 670, 52, 207, 115
+	Distance: 4
+Node 182: 182, 391, 189, 627
+	Distance: 3
+Node 183: 183, 1000, 696, 338, 630, 503
+	Distance: 5
+Node 184: 184, 610, 630, 503
+	Distance: 3
+Node 185: 185, 711, 819, 32
+	Distance: 3
+Node 186: 186, 583, 354, 503
+	Distance: 3
+Node 187: 187, 322, 618, 964
+	Distance: 3
+Node 188: 188, 120, 503
+	Distance: 2
+Node 189: 189, 627
+	Distance: 1
+Node 190: 190, 441, 43, 115
+	Distance: 3
+Node 191: 191, 167, 65, 396, 286, 503
+	Distance: 5
+Node 192: 192, 872, 177, 43, 115
+	Distance: 4
+Node 193: 193, 657, 171, 964
+	Distance: 3
+Node 194: 194, 260, 646, 964
+	Distance: 3
+Node 195: 195, 672, 120, 503
+	Distance: 3
+Node 196: 196, 491, 686, 286, 503
+	Distance: 4
+Node 197: 197, 596, 396, 286, 503
+	Distance: 4
+Node 198: 198, 982, 59, 679, 120, 503
+	Distance: 5
+Node 199: 199, 518, 665, 354, 503
+	Distance: 4
+Node 200: 200, 5, 188, 120, 503
+	Distance: 4
+Node 201: 201, 826, 29, 303, 503
+	Distance: 4
+Node 202: 202, 514, 217, 115
+	Distance: 3
+Node 203: 203, 634, 411, 303, 503
+	Distance: 4
+Node 204: 204, 700, 330, 32
+	Distance: 3
+Node 205: 205, 71, 618, 964
+	Distance: 3
+Node 206: 206, 243, 249, 627
+	Distance: 3
+Node 207: 207, 115
+	Distance: 1
+Node 208: 208, 960, 318, 358, 627
+	Distance: 4
+Node 209: 209, 700, 330, 32
+	Distance: 3
+Node 210: 210, 811, 120, 503
+	Distance: 3
+Node 211: 211, 874, 717, 618, 964
+	Distance: 4
+Node 212: 212, 13, 249, 627
+	Distance: 3
+Node 213: 213, 653, 964
+	Distance: 2
+Node 214: 214, 223, 330, 32
+	Distance: 3
+Node 215: 215, 194, 260, 646, 964
+	Distance: 4
+Node 216: 216, 1, 704, 627
+	Distance: 3
+Node 217: 217, 115
+	Distance: 1
+Node 218: 218, 0, 918, 503
+	Distance: 3
+Node 219: 219, 853, 32
+	Distance: 2
+Node 220: 220, 321, 630, 503
+	Distance: 3
+Node 221: 221, 646, 964
+	Distance: 2
+Node 222: 222, 319, 901, 853, 32
+	Distance: 4
+Node 223: 223, 330, 32
+	Distance: 2
+Node 224: 224, 525, 921, 171, 964
+	Distance: 4
+Node 225: 225, 147, 303, 503
+	Distance: 3
+Node 226: 226, 35, 733, 646, 964
+	Distance: 4
+Node 227: 227, 646, 964
+	Distance: 2
+Node 228: 228, 986, 653, 964
+	Distance: 3
+Node 229: 229, 337, 358, 627
+	Distance: 3
+Node 230: 230, 972, 532, 618, 964
+	Distance: 4
+Node 231: 231, 441, 43, 115
+	Distance: 3
+Node 232: 232, 43, 115
+	Distance: 2
+Node 233: 233, 16, 420, 120, 503
+	Distance: 4
+Node 234: 234, 671, 217, 115
+	Distance: 3
+Node 235: Node does not exist in the graph
+	Distance: NIL
+Node 236: 236, 16, 420, 120, 503
+	Distance: 4
+Node 237: 237, 874, 717, 618, 964
+	Distance: 4
+Node 238: 238, 493, 514, 217, 115
+	Distance: 4
+Node 239: 239, 143, 819, 32
+	Distance: 3
+Node 240: 240, 212, 13, 249, 627
+	Distance: 4
+Node 241: 241, 428, 969, 120, 503
+	Distance: 4
+Node 242: 242, 871, 171, 964
+	Distance: 3
+Node 243: 243, 249, 627
+	Distance: 2
+Node 244: 244, 709, 43, 115
+	Distance: 3
+Node 245: 245, 606, 613, 918, 503
+	Distance: 4
+Node 246: 246, 799, 358, 627
+	Distance: 3
+Node 247: 247, 323, 411, 303, 503
+	Distance: 4
+Node 248: 248, 0, 918, 503
+	Distance: 3
+Node 249: 249, 627
+	Distance: 1
+Node 250: 250, 149, 303, 503
+	Distance: 3
+Node 251: 251, 824, 704, 627
+	Distance: 3
+Node 252: 252, 887, 143, 819, 32
+	Distance: 4
+Node 253: 253, 632, 475, 189, 627
+	Distance: 4
+Node 254: 254, 522, 227, 646, 964
+	Distance: 4
+Node 255: 255, 349, 411, 303, 503
+	Distance: 4
+Node 256: 256, 520, 79, 286, 503
+	Distance: 4
+Node 257: 257, 933, 142, 32
+	Distance: 3
+Node 258: 258, 901, 853, 32
+	Distance: 3
+Node 259: 259, 826, 29, 303, 503
+	Distance: 4
+Node 260: 260, 646, 964
+	Distance: 2
+Node 261: 261, 299, 410, 43, 115
+	Distance: 4
+Node 262: 262, 516, 717, 618, 964
+	Distance: 4
+Node 263: 263, 354, 503
+	Distance: 2
+Node 264: 264, 320, 871, 171, 964
+	Distance: 4
+Node 265: 265, 292, 772, 775, 503
+	Distance: 4
+Node 266: 266, 163, 679, 120, 503
+	Distance: 4
+Node 267: 267, 411, 303, 503
+	Distance: 3
+Node 268: 268, 282, 709, 43, 115
+	Distance: 4
+Node 269: 269, 823, 232, 43, 115
+	Distance: 4
+Node 270: 270, 732, 551, 354, 503
+	Distance: 4
+Node 271: 271, 516, 717, 618, 964
+	Distance: 4
+Node 272: 272, 286, 503
+	Distance: 2
+Node 273: 273, 177, 43, 115
+	Distance: 3
+Node 274: 274, 105, 318, 358, 627
+	Distance: 4
+Node 275: 275, 852, 294, 736, 32
+	Distance: 4
+Node 276: 276, 403, 630, 503
+	Distance: 3
+Node 277: 277, 904, 704, 627
+	Distance: 3
+Node 278: 278, 750, 833, 189, 627
+	Distance: 4
+Node 279: 279, 403, 630, 503
+	Distance: 3
+Node 280: 280, 263, 354, 503
+	Distance: 3
+Node 281: 281, 213, 653, 964
+	Distance: 3
+Node 282: 282, 709, 43, 115
+	Distance: 3
+Node 283: 283, 836, 40, 894, 964
+	Distance: 4
+Node 284: 284, 248, 0, 918, 503
+	Distance: 4
+Node 285: 285, 532, 618, 964
+	Distance: 3
+Node 286: 286, 503
+	Distance: 1
+Node 287: 287, 719, 898, 207, 115
+	Distance: 4
+Node 288: 288, 150, 736, 32
+	Distance: 3
+Node 289: 289, 305, 679, 120, 503
+	Distance: 4
+Node 290: 290, 472, 930, 354, 503
+	Distance: 4
+Node 291: 291, 140, 814, 286, 503
+	Distance: 4
+Node 292: 292, 772, 775, 503
+	Distance: 3
+Node 293: 293, 207, 115
+	Distance: 2
+Node 294: 294, 736, 32
+	Distance: 2
+Node 295: 295, 610, 630, 503
+	Distance: 3
+Node 296: 296, 894, 964
+	Distance: 2
+Node 297: 297, 598, 739, 618, 964
+	Distance: 4
+Node 298: 298, 745, 171, 964
+	Distance: 3
+Node 299: 299, 410, 43, 115
+	Distance: 3
+Node 300: 300, 37, 630, 503
+	Distance: 3
+Node 301: 301, 631, 150, 736, 32
+	Distance: 4
+Node 302: 302, 751, 263, 354, 503
+	Distance: 4
+Node 303: 303, 503
+	Distance: 1
+Node 304: 304, 161, 145, 618, 964
+	Distance: 4
+Node 305: 305, 679, 120, 503
+	Distance: 3
+Node 306: 306, 844, 330, 32
+	Distance: 3
+Node 307: 307, 665, 354, 503
+	Distance: 3
+Node 308: 308, 800, 323, 411, 303, 503
+	Distance: 5
+Node 309: 309, 439, 672, 120, 503
+	Distance: 4
+Node 310: 310, 508, 630, 503
+	Distance: 3
+Node 311: 311, 810, 765, 354, 503
+	Distance: 4
+Node 312: 312, 672, 120, 503
+	Distance: 3
+Node 313: 313, 778, 420, 120, 503
+	Distance: 4
+Node 314: 314, 483, 689, 487, 303, 503
+	Distance: 5
+Node 315: 315, 378, 188, 120, 503
+	Distance: 4
+Node 316: 316, 930, 354, 503
+	Distance: 3
+Node 317: 317, 930, 354, 503
+	Distance: 3
+Node 318: 318, 358, 627
+	Distance: 2
+Node 319: 319, 901, 853, 32
+	Distance: 3
+Node 320: 320, 871, 171, 964
+	Distance: 3
+Node 321: 321, 630, 503
+	Distance: 2
+Node 322: 322, 618, 964
+	Distance: 2
+Node 323: 323, 411, 303, 503
+	Distance: 3
+Node 324: 324, 765, 354, 503
+	Distance: 3
+Node 325: 325, 330, 32
+	Distance: 2
+Node 326: 326, 662, 820, 207, 115
+	Distance: 4
+Node 327: 327, 954, 520, 79, 286, 503
+	Distance: 5
+Node 328: 328, 952, 998, 819, 32
+	Distance: 4
+Node 329: 329, 408, 177, 43, 115
+	Distance: 4
+Node 330: 330, 32
+	Distance: 1
+Node 331: 331, 900, 43, 115
+	Distance: 3
+Node 332: 332, 147, 303, 503
+	Distance: 3
+Node 333: 333, 934, 672, 120, 503
+	Distance: 4
+Node 334: 334, 233, 16, 420, 120, 503
+	Distance: 5
+Node 335: 335, 338, 630, 503
+	Distance: 3
+Node 336: 336, 844, 330, 32
+	Distance: 3
+Node 337: 337, 358, 627
+	Distance: 2
+Node 338: 338, 630, 503
+	Distance: 2
+Node 339: 339, 532, 618, 964
+	Distance: 3
+Node 340: 340, 986, 653, 964
+	Distance: 3
+Node 341: 341, 474, 765, 354, 503
+	Distance: 4
+Node 342: 342, 832, 411, 303, 503
+	Distance: 4
+Node 343: 343, 634, 411, 303, 503
+	Distance: 4
+Node 344: 344, 193, 657, 171, 964
+	Distance: 4
+Node 345: 345, 570, 142, 32
+	Distance: 3
+Node 346: 346, 147, 303, 503
+	Distance: 3
+Node 347: 347, 823, 232, 43, 115
+	Distance: 4
+Node 348: 348, 442, 736, 32
+	Distance: 3
+Node 349: 349, 411, 303, 503
+	Distance: 3
+Node 350: 350, 637, 639, 853, 32
+	Distance: 4
+Node 351: 351, 359, 969, 120, 503
+	Distance: 4
+Node 352: 352, 958, 189, 627
+	Distance: 3
+Node 353: 353, 96, 145, 618, 964
+	Distance: 4
+Node 354: 354, 503
+	Distance: 1
+Node 355: 355, 337, 358, 627
+	Distance: 3
+Node 356: 356, 879, 686, 286, 503
+	Distance: 4
+Node 357: 357, 901, 853, 32
+	Distance: 3
+Node 358: 358, 627
+	Distance: 1
+Node 359: 359, 969, 120, 503
+	Distance: 3
+Node 360: 360, 936, 618, 964
+	Distance: 3
+Node 361: 361, 143, 819, 32
+	Distance: 3
+Node 362: 362, 1005, 56, 775, 503
+	Distance: 4
+Node 363: 363, 872, 177, 43, 115
+	Distance: 4
+Node 364: 364, 711, 819, 32
+	Distance: 3
+Node 365: 365, 935, 665, 354, 503
+	Distance: 4
+Node 366: 366, 947, 663, 207, 115
+	Distance: 4
+Node 367: 367, 679, 120, 503
+	Distance: 3
+Node 368: 368, 969, 120, 503
+	Distance: 3
+Node 369: 369, 260, 646, 964
+	Distance: 3
+Node 370: 370, 681, 680, 618, 964
+	Distance: 4
+Node 371: 371, 807, 811, 120, 503
+	Distance: 4
+Node 372: 372, 247, 323, 411, 303, 503
+	Distance: 5
+Node 373: 373, 11, 358, 627
+	Distance: 3
+Node 374: 374, 270, 732, 551, 354, 503
+	Distance: 5
+Node 375: 375, 54, 566, 814, 286, 503
+	Distance: 5
+Node 376: 376, 551, 354, 503
+	Distance: 3
+Node 377: 377, 282, 709, 43, 115
+	Distance: 4
+Node 378: 378, 188, 120, 503
+	Distance: 3
+Node 379: 379, 91, 158, 646, 964
+	Distance: 4
+Node 380: 380, 824, 704, 627
+	Distance: 3
+Node 381: 381, 773, 487, 303, 503
+	Distance: 4
+Node 382: 382, 294, 736, 32
+	Distance: 3
+Node 383: 383, 347, 823, 232, 43, 115
+	Distance: 5
+Node 384: 384, 821, 158, 646, 964
+	Distance: 4
+Node 385: 385, 711, 819, 32
+	Distance: 3
+Node 386: 386, 566, 814, 286, 503
+	Distance: 4
+Node 387: 387, 458, 578, 217, 115
+	Distance: 4
+Node 388: 388, 686, 286, 503
+	Distance: 3
+Node 389: 389, 149, 303, 503
+	Distance: 3
+Node 390: 390, 310, 508, 630, 503
+	Distance: 4
+Node 391: 391, 189, 627
+	Distance: 2
+Node 392: 392, 521, 448, 894, 964
+	Distance: 4
+Node 393: 393, 990, 618, 964
+	Distance: 3
+Node 394: 394, 1005, 56, 775, 503
+	Distance: 4
+Node 395: 395, 904, 704, 627
+	Distance: 3
+Node 396: 396, 286, 503
+	Distance: 2
+Node 397: 397, 59, 679, 120, 503
+	Distance: 4
+Node 398: 398, 557, 704, 627
+	Distance: 3
+Node 399: 399, 596, 396, 286, 503
+	Distance: 4
+Node 400: 400, 730, 578, 217, 115
+	Distance: 4
+Node 401: 401, 772, 775, 503
+	Distance: 3
+Node 402: 402, 2, 391, 189, 627
+	Distance: 4
+Node 403: 403, 630, 503
+	Distance: 2
+Node 404: 404, 401, 772, 775, 503
+	Distance: 4
+Node 405: 405, 911, 819, 32
+	Distance: 3
+Node 406: 406, 37, 630, 503
+	Distance: 3
+Node 407: 407, 507, 29, 303, 503
+	Distance: 4
+Node 408: 408, 177, 43, 115
+	Distance: 3
+Node 409: 409, 140, 814, 286, 503
+	Distance: 4
+Node 410: 410, 43, 115
+	Distance: 2
+Node 411: 411, 303, 503
+	Distance: 2
+Node 412: 412, 875, 814, 286, 503
+	Distance: 4
+Node 413: 413, 799, 358, 627
+	Distance: 3
+Node 414: 414, 936, 618, 964
+	Distance: 3
+Node 415: 415, 461, 221, 646, 964
+	Distance: 4
+Node 416: 416, 930, 354, 503
+	Distance: 3
+Node 417: 417, 803, 900, 43, 115
+	Distance: 4
+Node 418: 418, 784, 969, 120, 503
+	Distance: 4
+Node 419: 419, 551, 354, 503
+	Distance: 3
+Node 420: 420, 120, 503
+	Distance: 2
+Node 421: 421, 322, 618, 964
+	Distance: 3
+Node 422: 422, 519, 508, 630, 503
+	Distance: 4
+Node 423: 423, 982, 59, 679, 120, 503
+	Distance: 5
+Node 424: 424, 691, 765, 354, 503
+	Distance: 4
+Node 425: 425, 325, 330, 32
+	Distance: 3
+Node 426: 426, 376, 551, 354, 503
+	Distance: 4
+Node 427: 427, 974, 775, 503
+	Distance: 3
+Node 428: 428, 969, 120, 503
+	Distance: 3
+Node 429: 429, 905, 965, 775, 503
+	Distance: 4
+Node 430: 430, 820, 207, 115
+	Distance: 3
+Node 431: 431, 875, 814, 286, 503
+	Distance: 4
+Node 432: 432, 580, 391, 189, 627
+	Distance: 4
+Node 433: 433, 646, 964
+	Distance: 2
+Node 434: 434, 147, 303, 503
+	Distance: 3
+Node 435: 435, 441, 43, 115
+	Distance: 3
+Node 436: 436, 150, 736, 32
+	Distance: 3
+Node 437: 437, 338, 630, 503
+	Distance: 3
+Node 438: 438, 986, 653, 964
+	Distance: 3
+Node 439: 439, 672, 120, 503
+	Distance: 3
+Node 440: 440, 727, 396, 286, 503
+	Distance: 4
+Node 441: 441, 43, 115
+	Distance: 2
+Node 442: 442, 736, 32
+	Distance: 2
+Node 443: 443, 65, 396, 286, 503
+	Distance: 4
+Node 444: 444, 932, 162, 43, 115
+	Distance: 4
+Node 445: 445, 139, 142, 32
+	Distance: 3
+Node 446: 446, 709, 43, 115
+	Distance: 3
+Node 447: 447, 1, 704, 627
+	Distance: 3
+Node 448: 448, 894, 964
+	Distance: 2
+Node 449: Node does not exist in the graph
+	Distance: NIL
+Node 450: 450, 508, 630, 503
+	Distance: 3
+Node 451: 451, 587, 990, 618, 964
+	Distance: 4
+Node 452: 452, 679, 120, 503
+	Distance: 3
+Node 453: 453, 272, 286, 503
+	Distance: 3
+Node 454: 454, 765, 354, 503
+	Distance: 3
+Node 455: 455, 576, 514, 217, 115
+	Distance: 4
+Node 456: 456, 663, 207, 115
+	Distance: 3
+Node 457: 457, 517, 249, 627
+	Distance: 3
+Node 458: 458, 578, 217, 115
+	Distance: 3
+Node 459: 459, 419, 551, 354, 503
+	Distance: 4
+Node 460: 460, 474, 765, 354, 503
+	Distance: 4
+Node 461: 461, 221, 646, 964
+	Distance: 3
+Node 462: 462, 27, 293, 207, 115
+	Distance: 4
+Node 463: 463, 280, 263, 354, 503
+	Distance: 4
+Node 464: 464, 915, 56, 775, 503
+	Distance: 4
+Node 465: 465, 272, 286, 503
+	Distance: 3
+Node 466: 466, 354, 503
+	Distance: 2
+Node 467: 467, 29, 303, 503
+	Distance: 3
+Node 468: 468, 900, 43, 115
+	Distance: 3
+Node 469: 469, 294, 736, 32
+	Distance: 3
+Node 470: 470, 40, 894, 964
+	Distance: 3
+Node 471: 471, 879, 686, 286, 503
+	Distance: 4
+Node 472: 472, 930, 354, 503
+	Distance: 3
+Node 473: 473, 719, 898, 207, 115
+	Distance: 4
+Node 474: 474, 765, 354, 503
+	Distance: 3
+Node 475: 475, 189, 627
+	Distance: 2
+Node 476: 476, 745, 171, 964
+	Distance: 3
+Node 477: 477, 442, 736, 32
+	Distance: 3
+Node 478: 478, 696, 338, 630, 503
+	Distance: 4
+Node 479: 479, 99, 736, 32
+	Distance: 3
+Node 480: 480, 41, 195, 672, 120, 503
+	Distance: 5
+Node 481: 481, 682, 337, 358, 627
+	Distance: 4
+Node 482: 482, 351, 359, 969, 120, 503
+	Distance: 5
+Node 483: 483, 689, 487, 303, 503
+	Distance: 4
+Node 484: 484, 352, 958, 189, 627
+	Distance: 4
+Node 485: 485, 744, 871, 171, 964
+	Distance: 4
+Node 486: 486, 932, 162, 43, 115
+	Distance: 4
+Node 487: 487, 303, 503
+	Distance: 2
+Node 488: 488, 613, 918, 503
+	Distance: 3
+Node 489: 489, 171, 964
+	Distance: 2
+Node 490: 490, 489, 171, 964
+	Distance: 3
+Node 491: 491, 686, 286, 503
+	Distance: 3
+Node 492: 492, 947, 663, 207, 115
+	Distance: 4
+Node 493: 493, 514, 217, 115
+	Distance: 3
+Node 494: 494, 411, 303, 503
+	Distance: 3
+Node 495: 495, 852, 294, 736, 32
+	Distance: 4
+Node 496: 496, 529, 508, 630, 503
+	Distance: 4
+Node 497: 497, 243, 249, 627
+	Distance: 3
+Node 498: 498, 657, 171, 964
+	Distance: 3
+Node 499: 499, 122, 833, 189, 627
+	Distance: 4
+Node 500: 500, 521, 448, 894, 964
+	Distance: 4
+Node 501: 501, 221, 646, 964
+	Distance: 3
+Node 502: 502, 891, 171, 964
+	Distance: 3
+Node 503: 503
+	Distance: 0
+Node 504: 504, 604, 646, 964
+	Distance: 3
+Node 505: 505, 380, 824, 704, 627
+	Distance: 4
+Node 506: 506, 376, 551, 354, 503
+	Distance: 4
+Node 507: 507, 29, 303, 503
+	Distance: 3
+Node 508: 508, 630, 503
+	Distance: 2
+Node 509: 509, 517, 249, 627
+	Distance: 3
+Node 510: 510, 373, 11, 358, 627
+	Distance: 4
+Node 511: 511, 36, 508, 630, 503
+	Distance: 4
+Node 512: 512, 139, 142, 32
+	Distance: 3
+Node 513: 513, 727, 396, 286, 503
+	Distance: 4
+Node 514: 514, 217, 115
+	Distance: 2
+Node 515: 515, 765, 354, 503
+	Distance: 3
+Node 516: 516, 717, 618, 964
+	Distance: 3
+Node 517: 517, 249, 627
+	Distance: 2
+Node 518: 518, 665, 354, 503
+	Distance: 3
+Node 519: 519, 508, 630, 503
+	Distance: 3
+Node 520: 520, 79, 286, 503
+	Distance: 3
+Node 521: 521, 448, 894, 964
+	Distance: 3
+Node 522: 522, 227, 646, 964
+	Distance: 3
+Node 523: 523, 260, 646, 964
+	Distance: 3
+Node 524: 524, 193, 657, 171, 964
+	Distance: 4
+Node 525: 525, 921, 171, 964
+	Distance: 3
+Node 526: 526, 909, 646, 964
+	Distance: 3
+Node 527: 527, 884, 974, 775, 503
+	Distance: 4
+Node 528: 528, 599, 56, 775, 503
+	Distance: 4
+Node 529: 529, 508, 630, 503
+	Distance: 3
+Node 530: 530, 710, 338, 630, 503
+	Distance: 4
+Node 531: 531, 691, 765, 354, 503
+	Distance: 4
+Node 532: 532, 618, 964
+	Distance: 2
+Node 533: 533, 929, 177, 43, 115
+	Distance: 4
+Node 534: 534, 611, 514, 217, 115
+	Distance: 4
+Node 535: 535, 276, 403, 630, 503
+	Distance: 4
+Node 536: 536, 606, 613, 918, 503
+	Distance: 4
+Node 537: 537, 578, 217, 115
+	Distance: 3
+Node 538: 538, 441, 43, 115
+	Distance: 3
+Node 539: 539, 934, 672, 120, 503
+	Distance: 4
+Node 540: 540, 523, 260, 646, 964
+	Distance: 4
+Node 541: 541, 872, 177, 43, 115
+	Distance: 4
+Node 542: 542, 898, 207, 115
+	Distance: 3
+Node 543: 543, 737, 312, 672, 120, 503
+	Distance: 5
+Node 544: 544, 474, 765, 354, 503
+	Distance: 4
+Node 545: 545, 309, 439, 672, 120, 503
+	Distance: 5
+Node 546: 546, 929, 177, 43, 115
+	Distance: 4
+Node 547: 547, 578, 217, 115
+	Distance: 3
+Node 548: 548, 452, 679, 120, 503
+	Distance: 4
+Node 549: 549, 606, 613, 918, 503
+	Distance: 4
+Node 550: 550, 189, 627
+	Distance: 2
+Node 551: 551, 354, 503
+	Distance: 2
+Node 552: 552, 915, 56, 775, 503
+	Distance: 4
+Node 553: 553, 814, 286, 503
+	Distance: 3
+Node 554: 554, 52, 207, 115
+	Distance: 3
+Node 555: 555, 802, 232, 43, 115
+	Distance: 4
+Node 556: 556, 433, 646, 964
+	Distance: 3
+Node 557: 557, 704, 627
+	Distance: 2
+Node 558: 558, 686, 286, 503
+	Distance: 3
+Node 559: 559, 272, 286, 503
+	Distance: 3
+Node 560: 560, 71, 618, 964
+	Distance: 3
+Node 561: 561, 487, 303, 503
+	Distance: 3
+Node 562: 562, 934, 672, 120, 503
+	Distance: 4
+Node 563: 563, 53, 758, 403, 630, 503
+	Distance: 5
+Node 564: 564, 189, 627
+	Distance: 2
+Node 565: 565, 476, 745, 171, 964
+	Distance: 4
+Node 566: 566, 814, 286, 503
+	Distance: 3
+Node 567: 567, 302, 751, 263, 354, 503
+	Distance: 5
+Node 568: 568, 995, 177, 43, 115
+	Distance: 4
+Node 569: 569, 986, 653, 964
+	Distance: 3
+Node 570: 570, 142, 32
+	Distance: 2
+Node 571: 571, 310, 508, 630, 503
+	Distance: 4
+Node 572: 572, 730, 578, 217, 115
+	Distance: 4
+Node 573: 573, 901, 853, 32
+	Distance: 3
+Node 574: 574, 778, 420, 120, 503
+	Distance: 4
+Node 575: 575, 893, 984, 814, 286, 503
+	Distance: 5
+Node 576: 576, 514, 217, 115
+	Distance: 3
+Node 577: 577, 517, 249, 627
+	Distance: 3
+Node 578: 578, 217, 115
+	Distance: 2
+Node 579: 579, 890, 819, 32
+	Distance: 3
+Node 580: 580, 391, 189, 627
+	Distance: 3
+Node 581: 581, 912, 765, 354, 503
+	Distance: 4
+Node 582: 582, 475, 189, 627
+	Distance: 3
+Node 583: 583, 354, 503
+	Distance: 2
+Node 584: 584, 832, 411, 303, 503
+	Distance: 4
+Node 585: 585, 711, 819, 32
+	Distance: 3
+Node 586: 586, 925, 930, 354, 503
+	Distance: 4
+Node 587: 587, 990, 618, 964
+	Distance: 3
+Node 588: 588, 35, 733, 646, 964
+	Distance: 4
+Node 589: 589, 186, 583, 354, 503
+	Distance: 4
+Node 590: 590, 769, 396, 286, 503
+	Distance: 4
+Node 591: 591, 746, 894, 964
+	Distance: 3
+Node 592: 592, 920, 68, 686, 286, 503
+	Distance: 5
+Node 593: 593, 93, 551, 354, 503
+	Distance: 4
+Node 594: 594, 293, 207, 115
+	Distance: 3
+Node 595: 595, 880, 112, 630, 503
+	Distance: 4
+Node 596: 596, 396, 286, 503
+	Distance: 3
+Node 597: 597, 459, 419, 551, 354, 503
+	Distance: 5
+Node 598: 598, 739, 618, 964
+	Distance: 3
+Node 599: 599, 56, 775, 503
+	Distance: 3
+Node 600: 600, 397, 59, 679, 120, 503
+	Distance: 5
+Node 601: 601, 420, 120, 503
+	Distance: 3
+Node 602: 602, 263, 354, 503
+	Distance: 3
+Node 603: 603, 439, 672, 120, 503
+	Distance: 4
+Node 604: 604, 646, 964
+	Distance: 2
+Node 605: 605, 396, 286, 503
+	Distance: 3
+Node 606: 606, 613, 918, 503
+	Distance: 3
+Node 607: 607, 5, 188, 120, 503
+	Distance: 4
+Node 608: 608, 834, 142, 32
+	Distance: 3
+Node 609: 609, 65, 396, 286, 503
+	Distance: 4
+Node 610: 610, 630, 503
+	Distance: 2
+Node 611: 611, 514, 217, 115
+	Distance: 3
+Node 612: 612, 881, 570, 142, 32
+	Distance: 4
+Node 613: 613, 918, 503
+	Distance: 2
+Node 614: 614, 883, 686, 286, 503
+	Distance: 4
+Node 615: 615, 161, 145, 618, 964
+	Distance: 4
+Node 616: 616, 220, 321, 630, 503
+	Distance: 4
+Node 617: 617, 467, 29, 303, 503
+	Distance: 4
+Node 618: 618, 964
+	Distance: 1
+Node 619: 619, 248, 0, 918, 503
+	Distance: 4
+Node 620: 620, 904, 704, 627
+	Distance: 3
+Node 621: 621, 538, 441, 43, 115
+	Distance: 4
+Node 622: 622, 517, 249, 627
+	Distance: 3
+Node 623: 623, 221, 646, 964
+	Distance: 3
+Node 624: 624, 998, 819, 32
+	Distance: 3
+Node 625: 625, 958, 189, 627
+	Distance: 3
+Node 626: 626, 16, 420, 120, 503
+	Distance: 4
+Node 627: 627
+	Distance: 0
+Node 628: 628, 828, 188, 120, 503
+	Distance: 4
+Node 629: 629, 623, 221, 646, 964
+	Distance: 4
+Node 630: 630, 503
+	Distance: 1
+Node 631: 631, 150, 736, 32
+	Distance: 3
+Node 632: 632, 475, 189, 627
+	Distance: 3
+Node 633: 633, 403, 630, 503
+	Distance: 3
+Node 634: 634, 411, 303, 503
+	Distance: 3
+Node 635: 635, 346, 147, 303, 503
+	Distance: 4
+Node 636: 636, 984, 814, 286, 503
+	Distance: 4
+Node 637: 637, 639, 853, 32
+	Distance: 3
+Node 638: 638, 414, 936, 618, 964
+	Distance: 4
+Node 639: 639, 853, 32
+	Distance: 2
+Node 640: 640, 448, 894, 964
+	Distance: 3
+Node 641: 641, 406, 37, 630, 503
+	Distance: 4
+Node 642: 642, 36, 508, 630, 503
+	Distance: 4
+Node 643: 643, 526, 909, 646, 964
+	Distance: 4
+Node 644: 644, 930, 354, 503
+	Distance: 3
+Node 645: 645, 883, 686, 286, 503
+	Distance: 4
+Node 646: 646, 964
+	Distance: 1
+Node 647: 647, 618, 964
+	Distance: 2
+Node 648: 648, 348, 442, 736, 32
+	Distance: 4
+Node 649: 649, 80, 190, 441, 43, 115
+	Distance: 5
+Node 650: 650, 811, 120, 503
+	Distance: 3
+Node 651: 651, 670, 52, 207, 115
+	Distance: 4
+Node 652: Node does not exist in the graph
+	Distance: NIL
+Node 653: 653, 964
+	Distance: 1
+Node 654: 654, 419, 551, 354, 503
+	Distance: 4
+Node 655: 655, 439, 672, 120, 503
+	Distance: 4
+Node 656: 656, 485, 744, 871, 171, 964
+	Distance: 5
+Node 657: 657, 171, 964
+	Distance: 2
+Node 658: 658, 378, 188, 120, 503
+	Distance: 4
+Node 659: 659, 139, 142, 32
+	Distance: 3
+Node 660: 660, 735, 766, 354, 503
+	Distance: 4
+Node 661: 661, 175, 56, 775, 503
+	Distance: 4
+Node 662: 662, 820, 207, 115
+	Distance: 3
+Node 663: 663, 207, 115
+	Distance: 2
+Node 664: 664, 814, 286, 503
+	Distance: 3
+Node 665: 665, 354, 503
+	Distance: 2
+Node 666: 666, 59, 679, 120, 503
+	Distance: 4
+Node 667: 667, 359, 969, 120, 503
+	Distance: 4
+Node 668: 668, 442, 736, 32
+	Distance: 3
+Node 669: 669, 494, 411, 303, 503
+	Distance: 4
+Node 670: 670, 52, 207, 115
+	Distance: 3
+Node 671: 671, 217, 115
+	Distance: 2
+Node 672: 672, 120, 503
+	Distance: 2
+Node 673: 673, 852, 294, 736, 32
+	Distance: 4
+Node 674: 674, 285, 532, 618, 964
+	Distance: 4
+Node 675: 675, 207, 115
+	Distance: 2
+Node 676: 676, 126, 346, 147, 303, 503
+	Distance: 5
+Node 677: 677, 599, 56, 775, 503
+	Distance: 4
+Node 678: 678, 856, 411, 303, 503
+	Distance: 4
+Node 679: 679, 120, 503
+	Distance: 2
+Node 680: 680, 618, 964
+	Distance: 2
+Node 681: 681, 680, 618, 964
+	Distance: 3
+Node 682: 682, 337, 358, 627
+	Distance: 3
+Node 683: 683, 272, 286, 503
+	Distance: 3
+Node 684: 684, 778, 420, 120, 503
+	Distance: 4
+Node 685: 685, 307, 665, 354, 503
+	Distance: 4
+Node 686: 686, 286, 503
+	Distance: 2
+Node 687: 687, 83, 720, 974, 775, 503
+	Distance: 5
+Node 688: 688, 310, 508, 630, 503
+	Distance: 4
+Node 689: 689, 487, 303, 503
+	Distance: 3
+Node 690: 690, 358, 627
+	Distance: 2
+Node 691: 691, 765, 354, 503
+	Distance: 3
+Node 692: 692, 448, 894, 964
+	Distance: 3
+Node 693: 693, 522, 227, 646, 964
+	Distance: 4
+Node 694: 694, 243, 249, 627
+	Distance: 3
+Node 695: 695, 901, 853, 32
+	Distance: 3
+Node 696: 696, 338, 630, 503
+	Distance: 3
+Node 697: 697, 836, 40, 894, 964
+	Distance: 4
+Node 698: 698, 324, 765, 354, 503
+	Distance: 4
+Node 699: 699, 489, 171, 964
+	Distance: 3
+Node 700: 700, 330, 32
+	Distance: 2
+Node 701: 701, 369, 260, 646, 964
+	Distance: 4
+Node 702: 702, 488, 613, 918, 503
+	Distance: 4
+Node 703: 703, 220, 321, 630, 503
+	Distance: 4
+Node 704: 704, 627
+	Distance: 1
+Node 705: 705, 699, 489, 171, 964
+	Distance: 4
+Node 706: 706, 520, 79, 286, 503
+	Distance: 4
+Node 707: 707, 672, 120, 503
+	Distance: 3
+Node 708: 708, 165, 990, 618, 964
+	Distance: 4
+Node 709: 709, 43, 115
+	Distance: 2
+Node 710: 710, 338, 630, 503
+	Distance: 3
+Node 711: 711, 819, 32
+	Distance: 2
+Node 712: 712, 490, 489, 171, 964
+	Distance: 4
+Node 713: 713, 79, 286, 503
+	Distance: 3
+Node 714: 714, 848, 686, 286, 503
+	Distance: 4
+Node 715: 715, 732, 551, 354, 503
+	Distance: 4
+Node 716: 716, 564, 189, 627
+	Distance: 3
+Node 717: 717, 618, 964
+	Distance: 2
+Node 718: 718, 228, 986, 653, 964
+	Distance: 4
+Node 719: 719, 898, 207, 115
+	Distance: 3
+Node 720: 720, 974, 775, 503
+	Distance: 3
+Node 721: 721, 595, 880, 112, 630, 503
+	Distance: 5
+Node 722: 722, 177, 43, 115
+	Distance: 3
+Node 723: 723, 162, 43, 115
+	Distance: 3
+Node 724: 724, 136, 158, 646, 964
+	Distance: 4
+Node 725: 725, 25, 227, 646, 964
+	Distance: 4
+Node 726: 726, 958, 189, 627
+	Distance: 3
+Node 727: 727, 396, 286, 503
+	Distance: 3
+Node 728: 728, 522, 227, 646, 964
+	Distance: 4
+Node 729: 729, 419, 551, 354, 503
+	Distance: 4
+Node 730: 730, 578, 217, 115
+	Distance: 3
+Node 731: 731, 416, 930, 354, 503
+	Distance: 4
+Node 732: 732, 551, 354, 503
+	Distance: 3
+Node 733: 733, 646, 964
+	Distance: 2
+Node 734: 734, 217, 115
+	Distance: 2
+Node 735: 735, 766, 354, 503
+	Distance: 3
+Node 736: 736, 32
+	Distance: 1
+Node 737: 737, 312, 672, 120, 503
+	Distance: 4
+Node 738: 738, 705, 699, 489, 171, 964
+	Distance: 5
+Node 739: 739, 618, 964
+	Distance: 2
+Node 740: 740, 809, 149, 303, 503
+	Distance: 4
+Node 741: 741, 814, 286, 503
+	Distance: 3
+Node 742: 742, 548, 452, 679, 120, 503
+	Distance: 5
+Node 743: 743, 522, 227, 646, 964
+	Distance: 4
+Node 744: 744, 871, 171, 964
+	Distance: 3
+Node 745: 745, 171, 964
+	Distance: 2
+Node 746: 746, 894, 964
+	Distance: 2
+Node 747: 747, 316, 930, 354, 503
+	Distance: 4
+Node 748: 748, 824, 704, 627
+	Distance: 3
+Node 749: 749, 257, 933, 142, 32
+	Distance: 4
+Node 750: 750, 833, 189, 627
+	Distance: 3
+Node 751: 751, 263, 354, 503
+	Distance: 3
+Node 752: 752, 974, 775, 503
+	Distance: 3
+Node 753: 753, 295, 610, 630, 503
+	Distance: 4
+Node 754: 754, 93, 551, 354, 503
+	Distance: 4
+Node 755: 755, 908, 162, 43, 115
+	Distance: 4
+Node 756: 756, 193, 657, 171, 964
+	Distance: 4
+Node 757: 757, 234, 671, 217, 115
+	Distance: 4
+Node 758: 758, 403, 630, 503
+	Distance: 3
+Node 759: 759, 236, 16, 420, 120, 503
+	Distance: 5
+Node 760: 760, 554, 52, 207, 115
+	Distance: 4
+Node 761: 761, 5, 188, 120, 503
+	Distance: 4
+Node 762: 762, 523, 260, 646, 964
+	Distance: 4
+Node 763: 763, 650, 811, 120, 503
+	Distance: 4
+Node 764: 764, 780, 647, 618, 964
+	Distance: 4
+Node 765: 765, 354, 503
+	Distance: 2
+Node 766: 766, 354, 503
+	Distance: 2
+Node 767: 767, 871, 171, 964
+	Distance: 3
+Node 768: 768, 428, 969, 120, 503
+	Distance: 4
+Node 769: 769, 396, 286, 503
+	Distance: 3
+Node 770: 770, 604, 646, 964
+	Distance: 3
+Node 771: 771, 258, 901, 853, 32
+	Distance: 4
+Node 772: 772, 775, 503
+	Distance: 2
+Node 773: 773, 487, 303, 503
+	Distance: 3
+Node 774: 774, 570, 142, 32
+	Distance: 3
+Node 775: 775, 503
+	Distance: 1
+Node 776: 776, 564, 189, 627
+	Distance: 3
+Node 777: 777, 968, 318, 358, 627
+	Distance: 4
+Node 778: 778, 420, 120, 503
+	Distance: 3
+Node 779: 779, 707, 672, 120, 503
+	Distance: 4
+Node 780: 780, 647, 618, 964
+	Distance: 3
+Node 781: 781, 670, 52, 207, 115
+	Distance: 4
+Node 782: 782, 408, 177, 43, 115
+	Distance: 4
+Node 783: 783, 726, 958, 189, 627
+	Distance: 4
+Node 784: 784, 969, 120, 503
+	Distance: 3
+Node 785: 785, 46, 727, 396, 286, 503
+	Distance: 5
+Node 786: 786, 188, 120, 503
+	Distance: 3
+Node 787: 787, 647, 618, 964
+	Distance: 3
+Node 788: 788, 194, 260, 646, 964
+	Distance: 4
+Node 789: 789, 125, 396, 286, 503
+	Distance: 4
+Node 790: 790, 936, 618, 964
+	Distance: 3
+Node 791: 791, 393, 990, 618, 964
+	Distance: 4
+Node 792: 792, 786, 188, 120, 503
+	Distance: 4
+Node 793: 793, 319, 901, 853, 32
+	Distance: 4
+Node 794: 794, 59, 679, 120, 503
+	Distance: 4
+Node 795: 795, 848, 686, 286, 503
+	Distance: 4
+Node 796: 796, 356, 879, 686, 286, 503
+	Distance: 5
+Node 797: 797, 232, 43, 115
+	Distance: 3
+Node 798: 798, 419, 551, 354, 503
+	Distance: 4
+Node 799: 799, 358, 627
+	Distance: 2
+Node 800: 800, 323, 411, 303, 503
+	Distance: 4
+Node 801: 801, 466, 354, 503
+	Distance: 3
+Node 802: 802, 232, 43, 115
+	Distance: 3
+Node 803: 803, 900, 43, 115
+	Distance: 3
+Node 804: 804, 761, 5, 188, 120, 503
+	Distance: 5
+Node 805: 805, 970, 618, 964
+	Distance: 3
+Node 806: 806, 325, 330, 32
+	Distance: 3
+Node 807: 807, 811, 120, 503
+	Distance: 3
+Node 808: 808, 139, 142, 32
+	Distance: 3
+Node 809: 809, 149, 303, 503
+	Distance: 3
+Node 810: 810, 765, 354, 503
+	Distance: 3
+Node 811: 811, 120, 503
+	Distance: 2
+Node 812: 812, 250, 149, 303, 503
+	Distance: 4
+Node 813: 813, 730, 578, 217, 115
+	Distance: 4
+Node 814: 814, 286, 503
+	Distance: 2
+Node 815: 815, 47, 734, 217, 115
+	Distance: 4
+Node 816: 816, 707, 672, 120, 503
+	Distance: 4
+Node 817: 817, 745, 171, 964
+	Distance: 3
+Node 818: 818, 932, 162, 43, 115
+	Distance: 4
+Node 819: 819, 32
+	Distance: 1
+Node 820: 820, 207, 115
+	Distance: 2
+Node 821: 821, 158, 646, 964
+	Distance: 3
+Node 822: 822, 979, 739, 618, 964
+	Distance: 4
+Node 823: 823, 232, 43, 115
+	Distance: 3
+Node 824: 824, 704, 627
+	Distance: 2
+Node 825: 825, 272, 286, 503
+	Distance: 3
+Node 826: 826, 29, 303, 503
+	Distance: 3
+Node 827: 827, 433, 646, 964
+	Distance: 3
+Node 828: 828, 188, 120, 503
+	Distance: 3
+Node 829: 829, 704, 627
+	Distance: 2
+Node 830: 830, 525, 921, 171, 964
+	Distance: 4
+Node 831: 831, 810, 765, 354, 503
+	Distance: 4
+Node 832: 832, 411, 303, 503
+	Distance: 3
+Node 833: 833, 189, 627
+	Distance: 2
+Node 834: 834, 142, 32
+	Distance: 2
+Node 835: 835, 424, 691, 765, 354, 503
+	Distance: 5
+Node 836: 836, 40, 894, 964
+	Distance: 3
+Node 837: 837, 213, 653, 964
+	Distance: 3
+Node 838: 838, 243, 249, 627
+	Distance: 3
+Node 839: 839, 875, 814, 286, 503
+	Distance: 4
+Node 840: 840, 515, 765, 354, 503
+	Distance: 4
+Node 841: 841, 554, 52, 207, 115
+	Distance: 4
+Node 842: 842, 717, 618, 964
+	Distance: 3
+Node 843: 843, 117, 232, 43, 115
+	Distance: 4
+Node 844: 844, 330, 32
+	Distance: 2
+Node 845: 845, 267, 411, 303, 503
+	Distance: 4
+Node 846: 846, 367, 679, 120, 503
+	Distance: 4
+Node 847: 847, 339, 532, 618, 964
+	Distance: 4
+Node 848: 848, 686, 286, 503
+	Distance: 3
+Node 849: 849, 68, 686, 286, 503
+	Distance: 4
+Node 850: 850, 672, 120, 503
+	Distance: 3
+Node 851: 851, 465, 272, 286, 503
+	Distance: 4
+Node 852: 852, 294, 736, 32
+	Distance: 3
+Node 853: 853, 32
+	Distance: 1
+Node 854: 854, 707, 672, 120, 503
+	Distance: 4
+Node 855: 855, 465, 272, 286, 503
+	Distance: 4
+Node 856: 856, 411, 303, 503
+	Distance: 3
+Node 857: 857, 164, 766, 354, 503
+	Distance: 4
+Node 858: 858, 619, 248, 0, 918, 503
+	Distance: 5
+Node 859: 859, 152, 71, 618, 964
+	Distance: 4
+Node 860: 860, 40, 894, 964
+	Distance: 3
+Node 861: 861, 428, 969, 120, 503
+	Distance: 4
+Node 862: 862, 8, 894, 964
+	Distance: 3
+Node 863: 863, 242, 871, 171, 964
+	Distance: 4
+Node 864: 864, 709, 43, 115
+	Distance: 3
+Node 865: 865, 103, 359, 969, 120, 503
+	Distance: 5
+Node 866: 866, 716, 564, 189, 627
+	Distance: 4
+Node 867: 867, 263, 354, 503
+	Distance: 3
+Node 868: 868, 570, 142, 32
+	Distance: 3
+Node 869: 869, 829, 704, 627
+	Distance: 3
+Node 870: 870, 734, 217, 115
+	Distance: 3
+Node 871: 871, 171, 964
+	Distance: 2
+Node 872: 872, 177, 43, 115
+	Distance: 3
+Node 873: 873, 912, 765, 354, 503
+	Distance: 4
+Node 874: 874, 717, 618, 964
+	Distance: 3
+Node 875: 875, 814, 286, 503
+	Distance: 3
+Node 876: 876, 746, 894, 964
+	Distance: 3
+Node 877: 877, 3, 683, 272, 286, 503
+	Distance: 5
+Node 878: 878, 663, 207, 115
+	Distance: 3
+Node 879: 879, 686, 286, 503
+	Distance: 3
+Node 880: 880, 112, 630, 503
+	Distance: 3
+Node 881: 881, 570, 142, 32
+	Distance: 3
+Node 882: 882, 246, 799, 358, 627
+	Distance: 4
+Node 883: 883, 686, 286, 503
+	Distance: 3
+Node 884: 884, 974, 775, 503
+	Distance: 3
+Node 885: 885, 550, 189, 627
+	Distance: 3
+Node 886: 886, 410, 43, 115
+	Distance: 3
+Node 887: 887, 143, 819, 32
+	Distance: 3
+Node 888: 888, 937, 52, 207, 115
+	Distance: 4
+Node 889: 889, 935, 665, 354, 503
+	Distance: 4
+Node 890: 890, 819, 32
+	Distance: 2
+Node 891: 891, 171, 964
+	Distance: 2
+Node 892: 892, 970, 618, 964
+	Distance: 3
+Node 893: 893, 984, 814, 286, 503
+	Distance: 4
+Node 894: 894, 964
+	Distance: 1
+Node 895: 895, 731, 416, 930, 354, 503
+	Distance: 5
+Node 896: 896, 623, 221, 646, 964
+	Distance: 4
+Node 897: 897, 934, 672, 120, 503
+	Distance: 4
+Node 898: 898, 207, 115
+	Distance: 2
+Node 899: 899, 605, 396, 286, 503
+	Distance: 4
+Node 900: 900, 43, 115
+	Distance: 2
+Node 901: 901, 853, 32
+	Distance: 2
+Node 902: 902, 564, 189, 627
+	Distance: 3
+Node 903: 903, 776, 564, 189, 627
+	Distance: 4
+Node 904: 904, 704, 627
+	Distance: 2
+Node 905: 905, 965, 775, 503
+	Distance: 3
+Node 906: 906, 593, 93, 551, 354, 503
+	Distance: 5
+Node 907: 907, 461, 221, 646, 964
+	Distance: 4
+Node 908: 908, 162, 43, 115
+	Distance: 3
+Node 909: 909, 646, 964
+	Distance: 2
+Node 910: 910, 380, 824, 704, 627
+	Distance: 4
+Node 911: 911, 819, 32
+	Distance: 2
+Node 912: 912, 765, 354, 503
+	Distance: 3
+Node 913: 913, 517, 249, 627
+	Distance: 3
+Node 914: 914, 934, 672, 120, 503
+	Distance: 4
+Node 915: 915, 56, 775, 503
+	Distance: 3
+Node 916: 916, 248, 0, 918, 503
+	Distance: 4
+Node 917: 917, 640, 448, 894, 964
+	Distance: 4
+Node 918: 918, 503
+	Distance: 1
+Node 919: 919, 558, 686, 286, 503
+	Distance: 4
+Node 920: 920, 68, 686, 286, 503
+	Distance: 4
+Node 921: 921, 171, 964
+	Distance: 2
+Node 922: 922, 461, 221, 646, 964
+	Distance: 4
+Node 923: 923, 296, 894, 964
+	Distance: 3
+Node 924: 924, 689, 487, 303, 503
+	Distance: 4
+Node 925: 925, 930, 354, 503
+	Distance: 3
+Node 926: 926, 8, 894, 964
+	Distance: 3
+Node 927: 927, 744, 871, 171, 964
+	Distance: 4
+Node 928: 928, 296, 894, 964
+	Distance: 3
+Node 929: 929, 177, 43, 115
+	Distance: 3
+Node 930: 930, 354, 503
+	Distance: 2
+Node 931: 931, 786, 188, 120, 503
+	Distance: 4
+Node 932: 932, 162, 43, 115
+	Distance: 3
+Node 933: 933, 142, 32
+	Distance: 2
+Node 934: 934, 672, 120, 503
+	Distance: 3
+Node 935: 935, 665, 354, 503
+	Distance: 3
+Node 936: 936, 618, 964
+	Distance: 2
+Node 937: 937, 52, 207, 115
+	Distance: 3
+Node 938: 938, 655, 439, 672, 120, 503
+	Distance: 5
+Node 939: 939, 646, 964
+	Distance: 2
+Node 940: 940, 732, 551, 354, 503
+	Distance: 4
+Node 941: 941, 219, 853, 32
+	Distance: 3
+Node 942: 942, 391, 189, 627
+	Distance: 3
+Node 943: 943, 811, 120, 503
+	Distance: 3
+Node 944: 944, 193, 657, 171, 964
+	Distance: 4
+Node 945: 945, 933, 142, 32
+	Distance: 3
+Node 946: 946, 671, 217, 115
+	Distance: 3
+Node 947: 947, 663, 207, 115
+	Distance: 3
+Node 948: 948, 583, 354, 503
+	Distance: 3
+Node 949: 949, 576, 514, 217, 115
+	Distance: 4
+Node 950: 950, 662, 820, 207, 115
+	Distance: 4
+Node 951: 951, 474, 765, 354, 503
+	Distance: 4
+Node 952: 952, 998, 819, 32
+	Distance: 3
+Node 953: 953, 778, 420, 120, 503
+	Distance: 4
+Node 954: 954, 520, 79, 286, 503
+	Distance: 4
+Node 955: 955, 96, 145, 618, 964
+	Distance: 4
+Node 956: 956, 102, 824, 704, 627
+	Distance: 4
+Node 957: 957, 961, 411, 303, 503
+	Distance: 4
+Node 958: 958, 189, 627
+	Distance: 2
+Node 959: 959, 939, 646, 964
+	Distance: 3
+Node 960: 960, 318, 358, 627
+	Distance: 3
+Node 961: 961, 411, 303, 503
+	Distance: 3
+Node 962: 962, 826, 29, 303, 503
+	Distance: 4
+Node 963: 963, 776, 564, 189, 627
+	Distance: 4
+Node 964: 964
+	Distance: 0
+Node 965: 965, 775, 503
+	Distance: 2
+Node 966: 966, 733, 646, 964
+	Distance: 3
+Node 967: 967, 107, 834, 142, 32
+	Distance: 4
+Node 968: 968, 318, 358, 627
+	Distance: 3
+Node 969: 969, 120, 503
+	Distance: 2
+Node 970: 970, 618, 964
+	Distance: 2
+Node 971: 971, 774, 570, 142, 32
+	Distance: 4
+Node 972: 972, 532, 618, 964
+	Distance: 3
+Node 973: 973, 5, 188, 120, 503
+	Distance: 4
+Node 974: 974, 775, 503
+	Distance: 2
+Node 975: 975, 904, 704, 627
+	Distance: 3
+Node 976: 976, 147, 303, 503
+	Distance: 3
+Node 977: 977, 95, 933, 142, 32
+	Distance: 4
+Node 978: 978, 710, 338, 630, 503
+	Distance: 4
+Node 979: 979, 739, 618, 964
+	Distance: 3
+Node 980: 980, 396, 286, 503
+	Distance: 3
+Node 981: 981, 737, 312, 672, 120, 503
+	Distance: 5
+Node 982: 982, 59, 679, 120, 503
+	Distance: 4
+Node 983: 983, 348, 442, 736, 32
+	Distance: 4
+Node 984: 984, 814, 286, 503
+	Distance: 3
+Node 985: 985, 29, 303, 503
+	Distance: 3
+Node 986: 986, 653, 964
+	Distance: 2
+Node 987: 987, 367, 679, 120, 503
+	Distance: 4
+Node 988: 988, 633, 403, 630, 503
+	Distance: 4
+Node 989: 989, 447, 1, 704, 627
+	Distance: 4
+Node 990: 990, 618, 964
+	Distance: 2
+Node 991: 991, 305, 679, 120, 503
+	Distance: 4
+Node 992: 992, 529, 508, 630, 503
+	Distance: 4
+Node 993: 993, 727, 396, 286, 503
+	Distance: 4
+Node 994: 994, 761, 5, 188, 120, 503
+	Distance: 5
+Node 995: 995, 177, 43, 115
+	Distance: 3
+Node 996: 996, 879, 686, 286, 503
+	Distance: 4
+Node 997: 997, 339, 532, 618, 964
+	Distance: 4
+Node 998: 998, 819, 32
+	Distance: 2
+Node 999: 999, 799, 358, 627
+	Distance: 3
+Node 1000: 1000, 696, 338, 630, 503
+	Distance: 4
+Node 1001: 1001, 299, 410, 43, 115
+	Distance: 4
+Node 1002: 1002, 294, 736, 32
+	Distance: 3
+Node 1003: 1003, 140, 814, 286, 503
+	Distance: 4
+Node 1004: 1004, 130, 711, 819, 32
+	Distance: 4
+Node 1005: 1005, 56, 775, 503
+	Distance: 3

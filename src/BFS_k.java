@@ -101,22 +101,43 @@ public class BFS_k {
 
     private static void outputResults(int[][] pathLengths, HashMap<Integer, ArrayList<Integer>> adj, int maxNodeId, int k) {
         try {
-            System.out.println("Writing to file BFSKresults");
-            File myObj = new File("BFSKresults.txt");
+            System.out.print("Enter name of file to save output to (e.g. BFS_kResults.txt): ");
+            String fileName = new Scanner(System.in).nextLine();
+            System.out.println("Writing to file " + fileName);
+            File myObj = new File("output/"+fileName);
             myObj.createNewFile();
-            FileWriter myWriter = new FileWriter("BFSKresults.txt");
-        System.out.println("Distance from each node to " + k + " nearest hospitals.");
-        for (int node = 0; node < maxNodeId+1; node++) {
-            if (!adj.containsKey(node)) {
-                continue;
+            FileWriter myWriter = new FileWriter("output/"+fileName);
+            myWriter.write("Results of parts (c) and (d), with k = " + k + ".\n" +
+                    "Format of the output is as follows:\n" +
+                    "Node #: <distance to nearest hospital>, <distance to 2nd nearest hospital>, ..., <distance to kth nearest hospital>\n" +
+                    "\tNumber of hospitals within reach: <number of hospitals reached>\n\n" +
+                    "If a node ID does not exist in the graph, their number of hospitals within reach are recorded as NIL.\n" +
+                    "If the value of k exceeds the number of hospitals reachable, the remaining distances are indicated with a -1.\n" +
+                    "If a node is a hospital node, the first distance will be 0.\n\n");
+            for (int node = 0; node < maxNodeId+1; node++) {
+                myWriter.write("Node " + node + ": ");
+                if (!adj.containsKey(node)) {
+                    myWriter.write("Node does not exist in the graph\n");
+                    myWriter.write("\tNumber of hospitals within reach: NIL\n");
+                } else {
+                    if (pathLengths[node][k] == 0) {
+                        myWriter.write("No connection to any hospital found\n");
+                        myWriter.write("\tNumber of hospitals within reach: 0\n");
+                    } else {
+                        for (int i = 0; i < pathLengths[node].length - 2; i++) {
+                            if (pathLengths[node][i] == 0 && i != 0)
+                                myWriter.write("-1, ");
+                            else
+                                myWriter.write(pathLengths[node][i] + ", ");
+                        }
+                        if (pathLengths[node][pathLengths[node].length - 2] == 0)
+                            myWriter.write("-1\n");
+                        else
+                            myWriter.write(pathLengths[node][pathLengths[node].length - 2] + "\n");
+                        myWriter.write("\tNumber of hospitals within reach: " + pathLengths[node][pathLengths[node].length - 1] + "\n");
+                    }
+                }
             }
-            System.out.print("Node " + node + ": ");
-            for (int i = 0; i < pathLengths[node].length-2; i++) {
-                System.out.print(pathLengths[node][i] + ", ");
-            }
-            System.out.println(pathLengths[node][pathLengths[node].length-2]);
-            System.out.println("\tNumber of hospitals within reach: " + pathLengths[node][pathLengths[node].length-1]);
-        }
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
