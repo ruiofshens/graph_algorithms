@@ -56,7 +56,7 @@ public class BFS_k {
         int currentNumHospitalVisited;
         while (queue.size() != 0 && checkAllFilled < numNodes)
         {
-            // Dequeue a vertex from queue and print it
+            // Dequeue a vertex from queue
             currentNode = queue.poll();
 
             // Update that the currentNode is no longer in the queue
