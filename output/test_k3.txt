@@ -1,0 +1,37 @@
+Results of parts (c) and (d), with k = 3.
+Format of the output is as follows:
+Node #: <distance to nearest hospital>, <distance to 2nd nearest hospital>, ..., <distance to kth nearest hospital>
+	Number of hospitals within reach: <number of hospitals reached>
+
+If a node ID does not exist in the graph, their number of hospitals within reach are recorded as NIL.
+If the value of k exceeds the number of hospitals reachable, the remaining distances are indicated with a -1.
+If a node is a hospital node, the first distance will be 0.
+
+Node 0: 0, 2, 2
+	Number of hospitals within reach: 3
+Node 1: No connection to any hospital found
+	Number of hospitals within reach: 0
+Node 2: 1, 2, 2
+	Number of hospitals within reach: 3
+Node 3: 1, 1, 2
+	Number of hospitals within reach: 3
+Node 4: 1, 2, 3
+	Number of hospitals within reach: 3
+Node 5: 1, 2, 3
+	Number of hospitals within reach: 3
+Node 6: 1, 1, 2
+	Number of hospitals within reach: 3
+Node 7: 0, 1, 2
+	Number of hospitals within reach: 3
+Node 8: 0, 1, 2
+	Number of hospitals within reach: 3
+Node 9: 1, 2, 3
+	Number of hospitals within reach: 3
+Node 10: 2, 3, 4
+	Number of hospitals within reach: 3
+Node 11: Node does not exist in the graph
+	Number of hospitals within reach: NIL
+Node 12: 1, 2, 3
+	Number of hospitals within reach: 3
+Node 13: No connection to any hospital found
+	Number of hospitals within reach: 0

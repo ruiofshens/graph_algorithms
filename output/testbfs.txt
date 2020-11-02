@@ -1,0 +1,35 @@
+Results of parts (a) and (b).
+Format of the output is as follows:
+Node #: node1, node2, ... nodeHospital
+	Distance: <number of edges to nodeHospital>
+If a node ID does not exist in the graph, or a node is not connected to any hospitals, their distances are recorded with a NIL.
+If a node is a hospital node, the distance will be 0.
+
+Node 0: 0
+	Distance: 0
+Node 1: No connection to any hospital found
+	Distance: NIL
+Node 2: 2, 8
+	Distance: 1
+Node 3: 3, 0
+	Distance: 1
+Node 4: 4, 7
+	Distance: 1
+Node 5: 5, 0
+	Distance: 1
+Node 6: 6, 0
+	Distance: 1
+Node 7: 7
+	Distance: 0
+Node 8: 8
+	Distance: 0
+Node 9: 9, 8
+	Distance: 1
+Node 10: 10, 9, 8
+	Distance: 2
+Node 11: Node does not exist in the graph
+	Distance: NIL
+Node 12: 12, 7
+	Distance: 1
+Node 13: No connection to any hospital found
+	Distance: NIL
