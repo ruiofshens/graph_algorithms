@@ -22,6 +22,9 @@ public class BFS_k {
         // visited[nodeID][hospitalIndex] indicates whether nodeID has been visited by hospitals[hospitalIndex]
         boolean [] [] visited = new boolean[V] [num_hospitals];
 
+        // number of times the edges from each node have been traversed, maximum k
+        int[] numEdgeTraversals = new int[V];
+
         // Mark all the nodes that are already enqueued
         boolean [] isEnqueued = new boolean[V];
 
@@ -65,11 +68,11 @@ public class BFS_k {
             currentPathLengths = pathLengths[currentNode];
             currentHospitalsVisited = listHospitalsVisited[currentNode];
             currentNumHospitalVisited = pathLengths[currentNode][k];
-
+            int j = numEdgeTraversals[currentNode];
             // Get all adjacent node of the current node
             for (int n : adj.get(currentNode)) {
-                // Get all hospitals that have visited that adjacent node
-                for (int i = 0; i < currentNumHospitalVisited; i++) {
+                // Iterate through all hospitals that have visited the current node, starting from j
+                for (int i = j; i < currentNumHospitalVisited; i++) {
                      int hospital =  currentHospitalsVisited[i];
                      int pathLengthToHospital = currentPathLengths[i];
                         // If node has not been visited by the hospital, and number of currentHospitalsVisited is not k,
@@ -95,6 +98,7 @@ public class BFS_k {
                         }
                     }
                 }
+                numEdgeTraversals[currentNode] = currentNumHospitalVisited;
             }
         outputResults(pathLengths, adj, maxNodeID, k);
     }
