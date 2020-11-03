@@ -22,7 +22,7 @@ public class BFS_k {
         // visited[nodeID][hospitalIndex] indicates whether nodeID has been visited by hospitals[hospitalIndex]
         boolean [] [] visited = new boolean[V] [num_hospitals];
 
-        // number of times the edges from each node have been traversed, maximum k
+        // number of times the entire set of edges from each node have been traversed, maximum k
         int[] numEdgeTraversals = new int[V];
 
         // Mark all the nodes that are already enqueued
